@@ -23,7 +23,7 @@ namespace Project_2_26047179
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();//allows me to just refresh for design
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
