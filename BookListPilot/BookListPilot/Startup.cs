@@ -23,7 +23,7 @@ namespace BookListPilot
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();//nuget runtime
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,12 +41,12 @@ namespace BookListPilot
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles();//allows js, css....
 
-            app.UseRouting();
+            app.UseRouting();//db...
 
             app.UseAuthorization();
-
+            //to conifg more than 1 route
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
