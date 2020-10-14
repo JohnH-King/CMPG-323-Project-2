@@ -26,11 +26,12 @@ namespace BookListPilot
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));//include entity framework, after this push to db (in console of nuget, use "add-migration 'AddBooktoDb'") this automatically creates the book constructor etc.
+            services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();//nuget runtime
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)//middelwares
         {
             if (env.IsDevelopment())
             {
@@ -52,6 +53,7 @@ namespace BookListPilot
             //to conifg more than 1 route
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }
