@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Project_2_26047179.Model;
 
 namespace Project_2_26047179
 {
@@ -23,6 +25,8 @@ namespace Project_2_26047179
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));//include entity framework, after this push to db (in console of nuget, use "add-migration 'AddBooktoDb'") this automatically creates the book constructor etc.
+            services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();//allows me to just refresh for design
         }
 
@@ -49,7 +53,8 @@ namespace Project_2_26047179
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                endpoints.MapRazorPages();                
             });
         }
     }

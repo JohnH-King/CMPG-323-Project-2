@@ -13,7 +13,7 @@ namespace Project_2_26047179.Model
 
         public int Age { get; set; }
         public string Attrition{ get; set; }// yes/no
-        public string publicBusinessTravel { get; set; }
+        public string BusinessTravel { get; set; }
         public int DailyRate { get; set; }
         public string Department { get; set; }
         public int DistanceFromHome { get; set; }

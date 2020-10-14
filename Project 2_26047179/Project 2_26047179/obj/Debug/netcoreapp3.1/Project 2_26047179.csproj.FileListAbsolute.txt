@@ -374,3 +374,8 @@ C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\net
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.csproj.CoreCompileInputs.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.MvcApplicationPartsAssemblyInfo.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.MvcApplicationPartsAssemblyInfo.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\EmployeeList\Index.cshtml.g.cs
