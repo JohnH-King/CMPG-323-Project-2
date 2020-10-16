@@ -7,32 +7,6 @@ C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\net
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.runtimeconfig.dev.json
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.pdb
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.Views.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.Views.pdb
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.csprojAssemblyReference.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.AssemblyInfoInputs.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.AssemblyInfo.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorAssemblyInfo.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorAssemblyInfo.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.TagHelpers.input.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.TagHelpers.output.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorCoreGenerate.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorTargetAssemblyInfo.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorTargetAssemblyInfo.cs
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.Views.pdb
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\staticwebassets\Project 2_26047179.StaticWebAssets.Manifest.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\staticwebassets\Project 2_26047179.StaticWebAssets.xml
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.pdb
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.genruntimeconfig.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.csproj.CopyComplete
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -301,13 +275,47 @@ C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\net
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.Views.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Project 2_26047179.Views.pdb
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
@@ -335,37 +343,6 @@ C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\net
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -374,8 +351,32 @@ C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\net
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.AssemblyInfoInputs.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.AssemblyInfo.cs
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.csproj.CoreCompileInputs.cache
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.MvcApplicationPartsAssemblyInfo.cs
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.MvcApplicationPartsAssemblyInfo.cache
-C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorAssemblyInfo.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorAssemblyInfo.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.TagHelpers.input.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.TagHelpers.output.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorCoreGenerate.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\EmployeeList\Create.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\EmployeeList\Edit.cshtml.g.cs
 C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\EmployeeList\Index.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorTargetAssemblyInfo.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.RazorTargetAssemblyInfo.cs
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.Views.pdb
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.csproj.CopyComplete
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\staticwebassets\Project 2_26047179.StaticWebAssets.Manifest.cache
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\staticwebassets\Project 2_26047179.StaticWebAssets.xml
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.dll
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.pdb
+C:\Coding\CMPG 323\Project 2\Project 2_26047179\Project 2_26047179\obj\Debug\netcoreapp3.1\Project 2_26047179.genruntimeconfig.cache
