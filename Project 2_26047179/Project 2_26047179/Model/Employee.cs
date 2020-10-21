@@ -12,7 +12,7 @@ namespace Project_2_26047179.Model
         public int Id { get; set; }
 
         public int Age { get; set; }
-        public string Attrition{ get; set; }// yes/no
+        public string Attrition{ get; set; }
         public string BusinessTravel { get; set; }
         public int DailyRate { get; set; }
         public string Department { get; set; }
@@ -48,5 +48,7 @@ namespace Project_2_26047179.Model
         public int YearsSinceLastPromotion { get; set; }
         public int YearsWithCurrManager { get; set; }
            // 35 fields, eclu Id
+
+        
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +15,10 @@ namespace Project_2_26047179
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            //ReadFromCSV("C:\\Coding\\CMPG 323\\CMPG323 project 2 dataset.csv");
         }
+
+
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
