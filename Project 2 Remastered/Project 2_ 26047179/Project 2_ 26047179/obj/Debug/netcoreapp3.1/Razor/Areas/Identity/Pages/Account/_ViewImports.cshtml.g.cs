@@ -41,7 +41,7 @@ using Project_2__26047179.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a8fc95c9fb7e33830780f61059a862d528439fa8", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eb19512ae0f458af7830924eea847a54fe750233", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f0bf1957fc4fb7b7a65c5d01889f24479182f79", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
