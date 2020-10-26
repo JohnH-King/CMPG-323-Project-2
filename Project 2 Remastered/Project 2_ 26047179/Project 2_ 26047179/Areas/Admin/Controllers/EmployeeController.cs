@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_2__26047179.Data;
+using Project_2__26047179.Models;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
@@ -30,6 +31,21 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        //Post - CREATE
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Employee employee)
+        {
+            if(ModelState.IsValid)//valid on server side, like if num is empty
+            {
+                _db.Add(employee);
+                await _db.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));//or "Index" avoids spelling mistakes
+            }
+            return View(employee);
         }
     }
 }
