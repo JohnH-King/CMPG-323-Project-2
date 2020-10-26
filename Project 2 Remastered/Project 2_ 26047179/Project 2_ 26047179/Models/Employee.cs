@@ -11,6 +11,7 @@ namespace Project_2__26047179.Models
         [Key]
         public int Id { get; set; }
 
+        [Display(Name ="Employee Number")]
         [Required]
         public string EmployeeNumber { get; set; }
     }
