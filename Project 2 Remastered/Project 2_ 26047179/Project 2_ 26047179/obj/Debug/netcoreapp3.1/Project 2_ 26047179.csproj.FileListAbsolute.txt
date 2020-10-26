@@ -90,7 +90,6 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.AssemblyInfoInputs.cache
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.AssemblyInfo.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.RazorAssemblyInfo.cache
@@ -472,3 +471,8 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Employee\Index.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateButtonPartial.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Employee\Create.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBacktoListButton.cshtml.g.cs

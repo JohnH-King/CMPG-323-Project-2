@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Project_2__26047179</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/24a048a285.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -19,6 +20,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item dropdown text-white-50">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Content Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                                <a class="dropdown-item" >Database</a>
+                                <a class="dropdown-item" asp-action="Index" asp-controller="Employee" asp-area="Admin">Employee</a>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
