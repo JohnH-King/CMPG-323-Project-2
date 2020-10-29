@@ -86,5 +86,54 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                         select jobSpec).ToListAsync();
             return Json(new SelectList(jobSpecs, "Id", "JobRole"));
         }
+
+
+        //GET - EDIT
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null) return NotFound();
+            var jobSpecs = await _db.JobSpecs.SingleOrDefaultAsync(m => m.Id == id);
+            if (jobSpecs == null) return NotFound();
+
+            JobSpecAndEmployeeViewModel model = new JobSpecAndEmployeeViewModel()
+            {
+                EmployeeList = await _db.Employee.ToListAsync(),
+                JobSpecs = jobSpecs,
+                JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).Distinct().ToListAsync()
+            };
+
+            return View(model);
+        }
+
+        //Post - EDIT
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, JobSpecAndEmployeeViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var doesJobSpecExist = _db.JobSpecs.Include(s => s.Employee).Where(s => s.JobRole == model.JobSpecs.JobRole && s.Employee.Id == model.JobSpecs.EmployeeId);
+
+                if (doesJobSpecExist.Count() > 0)
+                {
+                    StatusMessage = "Error : Job Role exists under " + doesJobSpecExist.First().Employee.EmployeeNumber + " employee number. Please use another Number";
+                }
+                else
+                {
+                    _db.JobSpecs.Add(model.JobSpecs);
+                    await _db.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+
+            JobSpecAndEmployeeViewModel modelVM = new JobSpecAndEmployeeViewModel()
+            {
+                EmployeeList = await _db.Employee.ToListAsync(),
+                JobSpecs = model.JobSpecs,
+                JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).ToListAsync(),
+                StatusMessage = StatusMessage
+            };
+            return View(modelVM);
+        }
     }
 }
