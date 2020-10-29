@@ -91,9 +91,9 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         //GET - EDIT
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null) { return NotFound(); }
             var jobSpecs = await _db.JobSpecs.SingleOrDefaultAsync(m => m.Id == id);
-            if (jobSpecs == null) return NotFound();
+            if (jobSpecs == null) { return NotFound(); }
 
             JobSpecAndEmployeeViewModel model = new JobSpecAndEmployeeViewModel()
             {
@@ -104,7 +104,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
 
             return View(model);
         }
-
+        
         //Post - EDIT
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -135,5 +135,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             };
             return View(modelVM);
         }
+
+
     }
 }
