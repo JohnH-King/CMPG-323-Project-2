@@ -140,6 +140,19 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             return View(modelVM);
         }
 
-
+        //GET - DETAILS
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var jobSpecs = await _db.JobSpecs.Include(s => s.Employee).SingleOrDefaultAsync(m => m.Id == id);
+            if (jobSpecs == null)
+            {
+                return NotFound();
+            }
+            return View(jobSpecs);
+        }
     }
 }
