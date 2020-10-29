@@ -120,7 +120,10 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                 }
                 else
                 {
-                    _db.JobSpecs.Add(model.JobSpecs);
+                    var jobSpecFromDb = await _db.JobSpecs.FindAsync(id);
+                     jobSpecFromDb.JobRole = model.JobSpecs.JobRole;    //update Role
+
+                    
                     await _db.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -133,6 +136,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                 JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).ToListAsync(),
                 StatusMessage = StatusMessage
             };
+            modelVM.JobSpecs.Id = id;    //error handling
             return View(modelVM);
         }
 
