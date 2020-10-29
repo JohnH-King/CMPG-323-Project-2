@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Project_2__26047179</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://kit.fontawesome.com/24a048a285.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3" id="navDiv">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Project_2__26047179</a>
+                <a class="navbar-brand"  style="width:100%;" asp-area="" asp-controller="Home" asp-action="Index">Project_2__26047179</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="width:100%;">
+                    
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item dropdown text-white-50">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,16 +31,19 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <!--li class="nav-item"-->
+                            <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a-->
+                        <!---li-->
+                        <li style="padding-left:20px; margin-left:20px; border-left:ridge; border-color:orangered">
+                            <partial name="_LoginPartial" />
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+    </header><br/><br />
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
