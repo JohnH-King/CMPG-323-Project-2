@@ -154,5 +154,36 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             }
             return View(jobSpecs);
         }
+
+        //GET - DELETE
+        public async Task<IActionResult> Delete(int? id)//nullable field
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var jobSpecs = await _db.JobSpecs.Include(s => s.Employee).SingleOrDefaultAsync(m => m.Id == id);
+            if (jobSpecs == null)
+            {
+                return NotFound();
+            }
+            return View(jobSpecs);
+        }
+
+        //POST - DELETE
+        [HttpPost, ActionName("Delete")]    //is a delete action method
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id) //id = @model, Has to have a value != null
+        {
+            var jobSpecs = await _db.JobSpecs.Include(s => s.Employee).SingleOrDefaultAsync(m => m.Id == id);
+            if (jobSpecs == null)
+            {
+                return NotFound();  //or to the View
+            }
+            _db.JobSpecs.Remove(jobSpecs);
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

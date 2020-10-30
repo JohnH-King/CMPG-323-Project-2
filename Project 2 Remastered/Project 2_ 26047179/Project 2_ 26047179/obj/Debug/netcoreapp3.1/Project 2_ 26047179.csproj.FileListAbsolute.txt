@@ -486,3 +486,6 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_StatusMessage.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\JobSpecs\Edit.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\JobSpecs\Details.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\JobSpecs\Delete.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DeleteAndBackToListButton.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
