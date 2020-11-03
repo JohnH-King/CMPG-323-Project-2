@@ -81,6 +81,11 @@ body {
     align-items: center;
     height: 200px;
 }
+
+label{
+    color: black;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

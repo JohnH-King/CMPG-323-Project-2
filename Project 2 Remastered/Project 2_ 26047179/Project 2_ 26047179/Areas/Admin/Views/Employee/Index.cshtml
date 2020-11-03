@@ -28,19 +28,54 @@
                 <th>
                     @Html.DisplayNameFor(m => m.EmployeeNumber)
                 </th>
-                <th></th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Department)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.EmployeeCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.EnvironmentSatisfaction)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Overtime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.PerformanceRating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.StockOptionLevel)
+                </th>
                 <th></th>
             </tr>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(m => item.EmployeeNumber)
-                    </td>
-                    <td>
-                        <partial name="_TableButtonPartial" model="item.Id" />
-                    </td>
-                </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(m => item.EmployeeNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.EmployeeCount)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.EnvironmentSatisfaction)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.Overtime)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.PerformanceRating)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.StockOptionLevel)
+            </td>
+            <td>
+                <partial name="_TableButtonPartial" model="item.Id" />
+            </td>
+        </tr>
             }
         </table>
         }

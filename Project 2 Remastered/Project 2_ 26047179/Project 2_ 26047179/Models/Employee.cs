@@ -14,5 +14,13 @@ namespace Project_2__26047179.Models
         [Display(Name ="Employee Number")]
         [Required]
         public string EmployeeNumber { get; set; }
+
+        public string Department { get; set; }
+        public int EmployeeCount { get; set; }
+        public int EnvironmentSatisfaction { get; set; }
+        public char Overtime { get; set; }
+        public int PerformanceRating { get; set; }
+        public int StockOptionLevel { get; set; }
+
     }
 }
