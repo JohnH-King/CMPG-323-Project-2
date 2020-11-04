@@ -86,6 +86,11 @@ label{
     color: black;
 }
 
+
+li {
+    color: black;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
