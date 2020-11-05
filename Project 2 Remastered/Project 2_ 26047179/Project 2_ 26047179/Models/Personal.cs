@@ -27,7 +27,7 @@ namespace Project_2__26047179.Models
         public int DailyRate { get; set; }
         public char Gender { get; set; }
 
-        [Display(Name = "Age")]
+        [Display(Name = "Maritial Status")]
         public string MaritialStatus { get; set; }
 
         [Display(Name = "Over 18?")]
