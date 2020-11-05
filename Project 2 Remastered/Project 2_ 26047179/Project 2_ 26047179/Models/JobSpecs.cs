@@ -16,6 +16,34 @@ namespace Project_2__26047179.Models
         [Required]
         public string JobRole { get; set; }
 
+        //add
+        [Display(Name = "Hourly Rate")]
+        public int HourlyRate { get; set; }
+
+        [Display(Name = "Job Involvement")]
+        public string JobInvolvement { get; set; }
+
+        [Display(Name = "Job Level")]
+        public int JobLevel { get; set; }
+
+        [Display(Name = "Job Satisfaction")]
+        public int JobSatisfaction { get; set; }
+
+        [Display(Name = "Monthly Income")]
+        public double MonthlyIncome { get; set; }
+
+        [Display(Name = "Monthyly Rate")]
+        public double MonthylyRate { get; set; }
+
+        [Display(Name = "Percent Salary Hike")]
+        public int PercentSalaryHike { get; set; }
+
+        [Display(Name = "Standard Hours")]
+        public int StandardHours { get; set; }
+
+
+        //-----
+
         [Required]
         [Display(Name ="Employee")]
         public int EmployeeId { get; set; }

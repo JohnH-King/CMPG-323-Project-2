@@ -16,6 +16,29 @@ namespace Project_2__26047179.Models
         [Required]
         public int Age { get; set; }
 
+        //add
+
+        public int Attrition { get; set; }
+
+        [Display(Name = "Businesss Travel")]
+        public string BusinesssTravel { get; set; }
+
+        [Display(Name = "Daily Rate")]
+        public int DailyRate { get; set; }
+        public char Gender { get; set; }
+
+        [Display(Name = "Age")]
+        public string MaritialStatus { get; set; }
+
+        [Display(Name = "Over 18?")]
+        public char Over18 { get; set; }
+
+        [Display(Name = "RelationshipSatisfaction")]
+        public int RelationshipSatisfaction { get; set; }
+
+
+        //-----
+
         [Required]
         [Display(Name = "Employee")]
         public int EmployeeId { get; set; }

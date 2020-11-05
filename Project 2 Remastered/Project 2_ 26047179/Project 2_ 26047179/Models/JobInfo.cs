@@ -16,6 +16,35 @@ namespace Project_2__26047179.Models
         [Required]
         public string EducationField { get; set; }
 
+
+        //add
+
+        public string Education { get; set; }
+
+        [Display(Name = "Number Of Companies Worked")]
+        public int NumCompaniesWorked { get; set; }
+
+        [Display(Name = "Total Working Years")]
+        public int TotalWorkingYears { get; set; }
+
+        [Display(Name = "Training Times Last Year")]
+        public int TrainingTimesLastYear { get; set; }
+
+        [Display(Name = "Work Life Balance")]
+        public int WorkLifeBalance { get; set; }
+
+        [Display(Name = "Years At Company")]
+        public int YearsAtCompany { get; set; }
+
+        [Display(Name = "Years In Current Role")]
+        public int YearsInCurrentRole { get; set; }
+
+        [Display(Name = "Years With Current Manager")]
+        public int YearsWithCurrManager { get; set; }
+
+
+        //-----
+
         [Required]
         [Display(Name = "Employee")]
         public int EmployeeId { get; set; }
