@@ -33,7 +33,7 @@ namespace Project_2__26047179.Models
         [Display(Name = "Over 18?")]
         public char Over18 { get; set; }
 
-        [Display(Name = "RelationshipSatisfaction")]
+        [Display(Name = "Relationship Satisfaction")]
         public int RelationshipSatisfaction { get; set; }
 
 

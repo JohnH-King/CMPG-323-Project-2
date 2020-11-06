@@ -8,49 +8,51 @@
 
 <br />
 <br />
-<div class="border" style="background-color: lightcyan; padding:10px;">
-    <div class="row">
-        <div class="col-6">
-            <h2 class="text-info">Personal List</h2>
+<fieldset>
+    <div class="border" style="background-color: lightcyan; padding:10px;">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text-info">Personal List</h2>
+            </div>
+            <div class="col-6 text-right">
+                <partial name="_CreateButtonPartial" />
+            </div>
         </div>
-        <div class="col-6 text-right">
-            <partial name="_CreateButtonPartial" />
-        </div>
-    </div>
-    <br />
-    <div>
-        @if (Model.Count() > 0)
-        {
-            <table class="table table-striped border">
-                <tr class="table-secondary">
-                    <th>
-                        @Html.DisplayNameFor(m => m.Age)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.Employee.EmployeeNumber)
-                    </th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(m => item.Age)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Employee.EmployeeNumber)
-                        </td>
-                        <td>
-                            <partial name="_TableButtonPartial" model="item.Id" />
-                        </td>
+        <br />
+        <div>
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            @Html.DisplayNameFor(m => m.Age)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.Employee.EmployeeNumber)
+                        </th>
+                        <th></th>
+                        <th></th>
                     </tr>
-                }
-            </table>
-        }
-        else
-        {
-            <p>No Job Information exists...</p>
-        }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => item.Age)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Employee.EmployeeNumber)
+                            </td>
+                            <td>
+                                <partial name="_TableButtonPartial" model="item.Id" />
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No Job Information exists...</p>
+            }
+        </div>
     </div>
-</div>
+</fieldset>

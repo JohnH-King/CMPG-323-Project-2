@@ -12,46 +12,57 @@
 <form method="post" asp-action="Details">
     <div class="border" style="background-color: lightcyan; padding:10px;">
         <div class="form-group col" style="padding:10px;">
-            <div class="row" style="width:100%">
-                <label asp-for="EmployeeNumber" class="col-form-label"></label>
-            
+            <div class="form-group col">
+                <div class="col-4">
+                    <label asp-for="EmployeeNumber" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
                     <input asp-for="EmployeeNumber" disabled class="form-control" />
                 </div>
-
-            <div class="col" style="width:100%">
-                    <label asp-for="Department" class="col-form-label"></label>
-                
-                    <input asp-for="Department" class="form-control" />
             </div>
-
-                <div class="col-2">
+            <div class="form-group col">
+                <div class="col-4">
+                    <label asp-for="Department" class="col-form-label"></label>
+                </div>
+                <div class="form-group col">
+                    <input asp-for="Department" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group col">
+                <div class="col-4">
                     <label asp-for="EmployeeCount" class="col-form-label"></label>
-               
+                </div>
+                <div class="col-5">
                     <input asp-for="EmployeeCount" class="form-control" />
                 </div>
-
-                <div class="col-2">
+            </div>
+            <div class="form-group col">
+                <div class="col-4">
                     <label asp-for="EnvironmentSatisfaction" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
                     <input asp-for="EnvironmentSatisfaction" class="form-control" />
                 </div>
-
-                <div class="col-1">
+            </div>
+            <div class="form-group col">
+                <div class="col-4">
                     <label asp-for="Overtime" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
                     <input asp-for="Overtime" class="form-control" />
                 </div>
+            </div>
+            <div class="form-group col">
 
-                <div class="col-2">
+                <div class="col-4">
                     <label asp-for="PerformanceRating" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
                     <input asp-for="PerformanceRating" class="form-control" />
                 </div>
-
-                <div class="col-2">
+            </div>
+            <div class="form-group col">
+                <div class="col-4">
                     <label asp-for="StockOptionLevel" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
@@ -64,4 +75,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </form>
