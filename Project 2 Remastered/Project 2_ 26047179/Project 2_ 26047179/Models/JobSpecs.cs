@@ -30,10 +30,10 @@ namespace Project_2__26047179.Models
         public int JobSatisfaction { get; set; }
 
         [Display(Name = "Monthly Income")]
-        public double MonthlyIncome { get; set; }
+        public int MonthlyIncome { get; set; }
 
         [Display(Name = "Monthyly Rate")]
-        public double MonthylyRate { get; set; }
+        public int MonthylyRate { get; set; }
 
         [Display(Name = "Percent Salary Hike")]
         public int PercentSalaryHike { get; set; }

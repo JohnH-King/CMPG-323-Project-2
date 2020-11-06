@@ -18,7 +18,7 @@ namespace Project_2__26047179.Models
 
         //add
 
-        public int Attrition { get; set; }
+        public string Attrition { get; set; }
 
         [Display(Name = "Businesss Travel")]
         public string BusinesssTravel { get; set; }
