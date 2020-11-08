@@ -232,9 +232,8 @@ namespace Project_2__26047179.Data.Migrations
                     b.Property<int>("EmployeeCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("EmployeeNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("EmployeeNumber")
+                        .HasColumnType("int");
 
                     b.Property<int>("EnvironmentSatisfaction")
                         .HasColumnType("int");

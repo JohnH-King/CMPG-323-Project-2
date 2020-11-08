@@ -13,7 +13,7 @@ namespace Project_2__26047179.Models
 
         [Display(Name ="Employee Number")]
         [Required]
-        public string EmployeeNumber { get; set; }
+        public int EmployeeNumber { get; set; }
 
         public string Department { get; set; }
 
