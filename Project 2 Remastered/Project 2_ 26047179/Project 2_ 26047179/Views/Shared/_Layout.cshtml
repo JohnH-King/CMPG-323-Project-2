@@ -6,26 +6,30 @@
     <title>@ViewData["Title"] - Project_2__26047179</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="https://kit.fontawesome.com/24a048a285.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3" id="navDiv">
             <div class="container">
-                <a class="navbar-brand"  style="width:100%;" asp-area="" asp-controller="Home" asp-action="Index">Project_2__26047179</a>
+                <a class="navbar-brand" style="width:100%;" asp-area="" asp-controller="Home" asp-action="Index">Project_2__26047179</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="width:100%;">
-                    
+
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item dropdown text-white-50">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Content Management
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
-                                <a class="dropdown-item">Database</a>
+                                <a class="dropdown-item" asp-action="Index" asp-controller="DBAdministration" asp-area="Admin">Database View</a>
                                 <a class="dropdown-item" asp-action="Index" asp-controller="Employee" asp-area="Admin">Employee</a>
                                 <a class="dropdown-item" asp-action="Index" asp-controller="JobSpecs" asp-area="Admin">Job Specifications</a>
                                 <a class="dropdown-item" asp-action="Index" asp-controller="JobInfo" asp-area="Admin">Job Experience</a>
@@ -37,7 +41,7 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
                         </li>
                         <!--li class="nav-item"-->
-                            <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a-->
+                        <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a-->
                         <!---li-->
                         <li style="padding-left:20px; margin-left:20px; border-left:ridge; border-color:orangered">
                             <partial name="_LoginPartial" />
@@ -46,8 +50,8 @@
                 </div>
             </div>
         </nav>
-    </header><br/><br />
-    <div class="container"  style="  height:100%; margin:20px;">
+    </header><br /><br />
+    <div class="container" style="  height:100%; margin:20px;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -60,6 +64,10 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
