@@ -24,120 +24,88 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             _db = db;
         }
 
-        //GET - index
+        //GET Index
         public async Task<IActionResult> Index()
-        {
-            var jobSpecs = await _db.JobSpecs.Include(s=>s.Employee).ToListAsync();
-            return View(jobSpecs);
+        {//use dependency injection
+            return View(await _db.Employee.ToListAsync());
         }
 
         //Get - Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            JobSpecAndEmployeeViewModel model = new JobSpecAndEmployeeViewModel()
-            {
-                EmployeeList = await _db.Employee.ToListAsync(),
-                JobSpecs = new Models.JobSpecs(),
-                JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).Distinct().ToListAsync()
-            };
-
-            return View(model);
+            return View();
         }
 
-        //Post - Create
+        //Post - CREATE
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(JobSpecAndEmployeeViewModel model)
+        public async Task<IActionResult> Create(Employee employee)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)//valid on server side, like if num is empty
             {
-                var doesJobSpecExist = _db.JobSpecs.Include(s => s.Employee).Where(s => s.JobRole == model.JobSpecs.JobRole && s.Employee.Id==model.JobSpecs.EmployeeId);
+                _db.Add(employee);
+                await _db.SaveChangesAsync();
 
-                if(doesJobSpecExist.Count()>0)
-                {
-                    StatusMessage = "Error : Job Role exists under " + doesJobSpecExist.First().Employee.EmployeeNumber + " employee number. Please use another Number";
-                }
-                else 
-                {
-                    _db.JobSpecs.Add(model.JobSpecs);
-                    await _db.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
+                return RedirectToAction(nameof(Index));//or "Index" avoids spelling mistakes
             }
-
-            JobSpecAndEmployeeViewModel modelVM = new JobSpecAndEmployeeViewModel()
-            {
-                EmployeeList = await _db.Employee.ToListAsync(),
-                JobSpecs = model.JobSpecs,
-                JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).ToListAsync(),
-                StatusMessage = StatusMessage
-            };
-            return View(modelVM);
+            return View(employee);
         }
 
-
-        [ActionName("GetJobSpecs")]
-        public async Task<IActionResult> GetJobSpecs(int id)
-        {
-            List<JobSpecs> jobSpecs = new List<JobSpecs>();
-
-            jobSpecs = await (from jobSpec in _db.JobSpecs
-                        where jobSpec.EmployeeId == id
-                        select jobSpec).ToListAsync();
-            return Json(new SelectList(jobSpecs, "Id", "JobRole"));
-        }
-
-
-        //GET - EDIT
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null) { return NotFound(); }
-            var jobSpecs = await _db.JobSpecs.SingleOrDefaultAsync(m => m.Id == id);
-            if (jobSpecs == null) { return NotFound(); }
-
-            JobSpecAndEmployeeViewModel model = new JobSpecAndEmployeeViewModel()
+            if (id == null)
             {
-                EmployeeList = await _db.Employee.ToListAsync(),
-                JobSpecs = jobSpecs,
-                JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).Distinct().ToListAsync()
-            };
-
-            return View(model);
+                return NotFound();
+            }
+            var employee = await _db.Employee.FindAsync(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
         }
-        
-        //Post - EDIT
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, JobSpecAndEmployeeViewModel model)
+        public async Task<IActionResult> Edit(Employee employee)
         {
             if (ModelState.IsValid)
             {
-                var doesJobSpecExist = _db.JobSpecs.Include(s => s.Employee).Where(s => s.JobRole == model.JobSpecs.JobRole && s.Employee.Id == model.JobSpecs.EmployeeId);
+                _db.Update(employee);
+                await _db.SaveChangesAsync();
 
-                if (doesJobSpecExist.Count() > 0)
-                {
-                    StatusMessage = "Error : Job Role exists under " + doesJobSpecExist.First().Employee.EmployeeNumber + " employee number. Please use another Number";
-                }
-                else
-                {
-                    var jobSpecFromDb = await _db.JobSpecs.FindAsync(id);
-                     jobSpecFromDb.JobRole = model.JobSpecs.JobRole;    //update Role
-
-                    
-                    await _db.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
+                return RedirectToAction(nameof(Index));
             }
-
-            JobSpecAndEmployeeViewModel modelVM = new JobSpecAndEmployeeViewModel()
+            return View(employee);
+        }
+        //GET - DELETE
+        public async Task<IActionResult> Delete(int? id)//nullable field
+        {
+            if (id == null)
             {
-                EmployeeList = await _db.Employee.ToListAsync(),
-                JobSpecs = model.JobSpecs,
-                JobSpecsList = await _db.JobSpecs.OrderBy(p => p.JobRole).Select(p => p.JobRole).ToListAsync(),
-                StatusMessage = StatusMessage
-            };
-            modelVM.JobSpecs.Id = id;    //error handling
-            return View(modelVM);
+                return NotFound();
+            }
+            var employee = await _db.Employee.FindAsync(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
+
+        //POST - DELETE
+        [HttpPost, ActionName("Delete")]    //is a delete action method
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id) //id = @model, Has to have a value != null
+        {
+            var employee = await _db.Employee.FindAsync(id);
+            if (employee == null)
+            {
+                return NotFound();  //or to the View
+            }
+            _db.Employee.Remove(employee);
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         //GET - DETAILS
@@ -147,42 +115,12 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            var jobSpecs = await _db.JobSpecs.Include(s => s.Employee).SingleOrDefaultAsync(m => m.Id == id);
-            if (jobSpecs == null)
+            var employee = await _db.Employee.FindAsync(id);
+            if (employee == null)
             {
                 return NotFound();
             }
-            return View(jobSpecs);
-        }
-
-        //GET - DELETE
-        public async Task<IActionResult> Delete(int? id)//nullable field
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var jobSpecs = await _db.JobSpecs.Include(s => s.Employee).SingleOrDefaultAsync(m => m.Id == id);
-            if (jobSpecs == null)
-            {
-                return NotFound();
-            }
-            return View(jobSpecs);
-        }
-
-        //POST - DELETE
-        [HttpPost, ActionName("Delete")]    //is a delete action method
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id) //id = @model, Has to have a value != null
-        {
-            var jobSpecs = await _db.JobSpecs.Include(s => s.Employee).SingleOrDefaultAsync(m => m.Id == id);
-            if (jobSpecs == null)
-            {
-                return NotFound();  //or to the View
-            }
-            _db.JobSpecs.Remove(jobSpecs);
-            await _db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return View(employee);
         }
 
     }

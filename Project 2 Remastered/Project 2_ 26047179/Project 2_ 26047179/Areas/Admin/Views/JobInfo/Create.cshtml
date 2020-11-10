@@ -1,5 +1,4 @@
-﻿@model Project_2__26047179.Models.ViewModels.JobInfoAndEmployeeViewModel
-@using Project_2__26047179.Extensions
+﻿@model Project_2__26047179.Models.Employee
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,7 +10,7 @@
 <h1>Create Job Information</h1>
 <br />
 
-<partial name="_StatusMessage" model="Model.StatusMessage" />
+<!--partial name="_StatusMessage" model="Model.StatusMessage" /-->
 
 <div class="border" style="background-color: lightcyan; padding:10px; width:100%">
     <div class="col-8 border-right">
@@ -20,94 +19,95 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.EmployeeId" class="col-form-label"></label>
+                        <label asp-for="EmployeeNumber" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <select id="ddlEmployeeList" asp-for="JobInfo.EmployeeId" asp-items="Model.EmployeeList.ToSelectListItem(Model.JobInfo.EmployeeId)" class="form-control"></select>
+                        <input asp-for="EmployeeNumber" class="form-control" />
                     </div>
+                    <span asp-validation-for="EmployeeNumber" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.EducationField" class="col-form-label"></label>
+                        <label asp-for="EducationField" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.EducationField" class="form-control" />
+                        <input asp-for="EducationField" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.EducationField" class="text-danger"></span>
+                    <span asp-validation-for="EducationField" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.Education" class="col-form-label"></label>
+                        <label asp-for="Education" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.Education" class="form-control" />
+                        <input asp-for="Education" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.Education" class="text-danger"></span>
+                    <span asp-validation-for="Education" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.NumCompaniesWorked" class="col-form-label"></label>
+                        <label asp-for="NumCompaniesWorked" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.NumCompaniesWorked" class="form-control" />
+                        <input asp-for="NumCompaniesWorked" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.NumCompaniesWorked" class="text-danger"></span>
+                    <span asp-validation-for="NumCompaniesWorked" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.TotalWorkingYears" class="col-form-label"></label>
+                        <label asp-for="TotalWorkingYears" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.TotalWorkingYears" class="form-control" />
+                        <input asp-for="TotalWorkingYears" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.TotalWorkingYears" class="text-danger"></span>
+                    <span asp-validation-for="TotalWorkingYears" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.TrainingTimesLastYear" class="col-form-label"></label>
+                        <label asp-for="TrainingTimesLastYear" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.TrainingTimesLastYear" class="form-control" />
+                        <input asp-for="TrainingTimesLastYear" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.TrainingTimesLastYear" class="text-danger"></span>
+                    <span asp-validation-for="TrainingTimesLastYear" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.WorkLifeBalance" class="col-form-label"></label>
+                        <label asp-for="WorkLifeBalance" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.WorkLifeBalance" class="form-control" />
+                        <input asp-for="WorkLifeBalance" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.WorkLifeBalance" class="text-danger"></span>
+                    <span asp-validation-for="WorkLifeBalance" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.YearsAtCompany" class="col-form-label"></label>
+                        <label asp-for="YearsAtCompany" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.YearsAtCompany" class="form-control" />
+                        <input asp-for="YearsAtCompany" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.YearsAtCompany" class="text-danger"></span>
+                    <span asp-validation-for="YearsAtCompany" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.YearsInCurrentRole" class="col-form-label"></label>
+                        <label asp-for="YearsInCurrentRole" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.YearsInCurrentRole" class="form-control" />
+                        <input asp-for="YearsInCurrentRole" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.YearsInCurrentRole" class="text-danger"></span>
+                    <span asp-validation-for="YearsInCurrentRole" class="text-danger"></span>
                 </div>
                 <div class="form-group row">
                     <div class="col-3">
-                        <label asp-for="JobInfo.YearsWithCurrManager" class="col-form-label"></label>
+                        <label asp-for="YearsWithCurrManager" class="col-form-label"></label>
                     </div>
                     <div class="col-5">
-                        <input asp-for="JobInfo.YearsWithCurrManager" class="form-control" />
+                        <input asp-for="YearsWithCurrManager" class="form-control" />
                     </div>
-                    <span asp-validation-for="JobInfo.YearsWithCurrManager" class="text-danger"></span>
+                    <span asp-validation-for="YearsWithCurrManager" class="text-danger"></span>
                 </div>
-                <br/>
+                <br />
                 <div class="form-group row">
                     <div class="col-5 offset-3">
                         <partial name="_CreateAndBacktoListButton" />
@@ -116,16 +116,7 @@
             </div>
         </form>
     </div>
-    <div class="col-3 offset-1">
-        @if (Model.JobInfoList.Count() > 0)
-        {
-            <p> Existing Job Info: </p>
 
-            <div id="JobInfoList">
-                <ul class="list-group"></ul>
-            </div>
-        }
-    </div>
 
 
 </div>

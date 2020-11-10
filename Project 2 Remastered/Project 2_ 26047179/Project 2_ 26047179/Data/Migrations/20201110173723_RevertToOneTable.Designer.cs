@@ -10,8 +10,8 @@ using Project_2__26047179.Data;
 namespace Project_2__26047179.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201107141928_ChangeEmpNumToInt")]
-    partial class ChangeEmpNumToInt
+    [Migration("20201110173723_RevertToOneTable")]
+    partial class RevertToOneTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -228,7 +228,28 @@ namespace Project_2__26047179.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Attrition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BusinessTravel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DailyRate")
+                        .HasColumnType("int");
+
                     b.Property<string>("Department")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DistanceFromHome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Education")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EducationField")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("EmployeeCount")
@@ -240,39 +261,56 @@ namespace Project_2__26047179.Data.Migrations
                     b.Property<int>("EnvironmentSatisfaction")
                         .HasColumnType("int");
 
-                    b.Property<string>("Overtime")
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HourlyRate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("JobInvolvement")
+                        .HasColumnType("int");
+
+                    b.Property<int>("JobLevel")
+                        .HasColumnType("int");
+
+                    b.Property<string>("JobRole")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("JobSatisfaction")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MaritalStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MonthlyIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MonthlyRate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NumCompaniesWorked")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Over18")
                         .IsRequired()
                         .HasColumnType("nvarchar(1)");
+
+                    b.Property<string>("OverTime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PercentSalaryHike")
+                        .HasColumnType("int");
 
                     b.Property<int>("PerformanceRating")
                         .HasColumnType("int");
 
+                    b.Property<int>("RelationshipSatisfaction")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StandardHours")
+                        .HasColumnType("int");
+
                     b.Property<int>("StockOptionLevel")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Employee");
-                });
-
-            modelBuilder.Entity("Project_2__26047179.Models.JobInfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Education")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EducationField")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NumCompaniesWorked")
                         .HasColumnType("int");
 
                     b.Property<int>("TotalWorkingYears")
@@ -290,102 +328,15 @@ namespace Project_2__26047179.Data.Migrations
                     b.Property<int>("YearsInCurrentRole")
                         .HasColumnType("int");
 
+                    b.Property<int>("YearsSinceLastPromotion")
+                        .HasColumnType("int");
+
                     b.Property<int>("YearsWithCurrManager")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EmployeeId");
-
-                    b.ToTable("JobInfo");
-                });
-
-            modelBuilder.Entity("Project_2__26047179.Models.JobSpecs", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HourlyRate")
-                        .HasColumnType("int");
-
-                    b.Property<string>("JobInvolvement")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("JobLevel")
-                        .HasColumnType("int");
-
-                    b.Property<string>("JobRole")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("JobSatisfaction")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MonthlyIncome")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MonthylyRate")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PercentSalaryHike")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StandardHours")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EmployeeId");
-
-                    b.ToTable("JobSpecs");
-                });
-
-            modelBuilder.Entity("Project_2__26047179.Models.Personal", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Attrition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BusinesssTravel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("DailyRate")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("MaritialStatus")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Over18")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<int>("RelationshipSatisfaction")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EmployeeId");
-
-                    b.ToTable("Personal");
+                    b.ToTable("Employee");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -435,33 +386,6 @@ namespace Project_2__26047179.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Project_2__26047179.Models.JobInfo", b =>
-                {
-                    b.HasOne("Project_2__26047179.Models.Employee", "Employee")
-                        .WithMany()
-                        .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Project_2__26047179.Models.JobSpecs", b =>
-                {
-                    b.HasOne("Project_2__26047179.Models.Employee", "Employee")
-                        .WithMany()
-                        .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Project_2__26047179.Models.Personal", b =>
-                {
-                    b.HasOne("Project_2__26047179.Models.Employee", "Employee")
-                        .WithMany()
-                        .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

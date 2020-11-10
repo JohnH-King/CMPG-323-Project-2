@@ -43,13 +43,15 @@ namespace Project_2__26047179.Models.ViewModels
         public int YearsInCurrentRole { get; set; }
         public int YearsSinceLastPromotion { get; set; }
         public int YearsWithCurrManager { get; set; }
-        public JobInfo JobInfo { get; set; }
+
+        //We use these lists when using more tables
+        /*public JobInfo JobInfo { get; set; }
         public List<string> JobInfoList { get; set; }
 
         public JobSpecs JobSpecs { get; set; }
         public List<string> JobSpecsList { get; set; }
 
         public Personal Personal { get; set; }
-        public List<string> PersonalList { get; set; }
+        public List<string> PersonalList { get; set; }*/
     }
 }

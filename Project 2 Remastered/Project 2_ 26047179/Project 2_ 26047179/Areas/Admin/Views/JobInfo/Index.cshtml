@@ -1,4 +1,4 @@
-﻿@model IEnumerable<JobInfo>
+﻿@model IEnumerable<Employee>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -24,10 +24,10 @@
             <table class="table table-striped border">
                 <tr class="table-secondary">
                     <th>
-                        @Html.DisplayNameFor(m => m.EducationField)
+                        @Html.DisplayNameFor(m => m.EmployeeNumber)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(m => m.Employee.EmployeeNumber)
+                        @Html.DisplayNameFor(m => m.EducationField)
                     </th>
                     <th></th>
                     <th></th>
@@ -36,11 +36,11 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(m => item.EducationField)
+                            @Html.DisplayFor(m => item.EmployeeNumber)
                         </td>
                         <td>
-                            @Html.DisplayFor(m => item.Employee.EmployeeNumber)
-                        </td>
+                            @Html.DisplayFor(m => item.EducationField)
+                        </td>                        
                         <td>
                             <partial name="_TableButtonPartial" model="item.Id" />
                         </td>

@@ -15,9 +15,6 @@ namespace Project_2__26047179.Data
         }
 
         public DbSet<Employee> Employee { get; set; }
-        public DbSet<JobSpecs> JobSpecs { get; set; }
-        public DbSet<JobInfo> JobInfo { get; set; }
-        public DbSet<Personal> Personal { get; set; }
 
     }
 }

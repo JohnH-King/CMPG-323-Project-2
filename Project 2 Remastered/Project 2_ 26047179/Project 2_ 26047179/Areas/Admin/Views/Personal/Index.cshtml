@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Personal>
+﻿@model IEnumerable<Employee>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -28,7 +28,7 @@
                             @Html.DisplayNameFor(m => m.Age)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(m => m.Employee.EmployeeNumber)
+                            @Html.DisplayNameFor(m => m.EmployeeNumber)
                         </th>
                         <th></th>
                         <th></th>
@@ -40,7 +40,7 @@
                                 @Html.DisplayFor(m => item.Age)
                             </td>
                             <td>
-                                @Html.DisplayFor(m => item.Employee.EmployeeNumber)
+                                @Html.DisplayFor(m => item.EmployeeNumber)
                             </td>
                             <td>
                                 <partial name="_TableButtonPartial" model="item.Id" />

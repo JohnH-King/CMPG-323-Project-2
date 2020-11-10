@@ -21,10 +21,10 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         private readonly ApplicationDbContext _db;
         private readonly List<Employee> employees = new List<Employee>
                 {
-                    new Employee{EmployeeNumber=1, Department="test", EmployeeCount=1, EnvironmentSatisfaction=1, Overtime='Y', PerformanceRating=5, StockOptionLevel=0},
-                    new Employee{EmployeeNumber=2, Department="test", EmployeeCount=0, EnvironmentSatisfaction=1, Overtime='Y', PerformanceRating=5, StockOptionLevel=2},
-                    new Employee{EmployeeNumber=3, Department="test", EmployeeCount=2, EnvironmentSatisfaction=1, Overtime='N', PerformanceRating=5, StockOptionLevel=3},
-                    new Employee{EmployeeNumber = 4, Department = "test", EmployeeCount = 3, EnvironmentSatisfaction = 1, Overtime = 'N', PerformanceRating = 5, StockOptionLevel = 0 },
+                    new Employee{EmployeeNumber=1, Department="test", EmployeeCount=1, EnvironmentSatisfaction=1, OverTime="Yes", PerformanceRating=5, StockOptionLevel=0},
+                    new Employee{EmployeeNumber=2, Department="test", EmployeeCount=0, EnvironmentSatisfaction=1, OverTime="Yes", PerformanceRating=5, StockOptionLevel=2},
+                    new Employee{EmployeeNumber=3, Department="test", EmployeeCount=2, EnvironmentSatisfaction=1, OverTime="Yes", PerformanceRating=5, StockOptionLevel=3},
+                    new Employee{EmployeeNumber = 4, Department = "test", EmployeeCount = 3, EnvironmentSatisfaction = 1, OverTime = "No", PerformanceRating = 5, StockOptionLevel = 0 },
                 };
 
 
@@ -52,7 +52,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         {
             return Json(new { data = await _db.Employee.ToListAsync() });
         }
-        [HttpGet]
+        /*[HttpGet]
         public async Task<IActionResult> GetJobInfo()
         {
             return Json(new { data = await _db.JobInfo.ToListAsync() });
@@ -66,7 +66,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         public async Task<IActionResult> GetPersonal()
         {
             return Json(new { data = await _db.Personal.ToListAsync() });
-        }
+        }*/
 
 
         public IActionResult WriteCSV()
@@ -76,7 +76,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             builder.AppendLine("Age, Attrition, BusinessTravel,DailyRate, Department, DistanceFromHome, Education, EducationField, EmployeeCount, EmployeeNumber, EnvironmentSatisfaction,Gender, HourlyRate, JobInvolvement,JobLevel, JobRole, JobSatisfaction,MaritalStatus, MonthlyIncome, MonthlyRate, NumCompaniesWorked, Over18, OverTime, PercentSalaryHike, PerformanceRating, RelationshipSatisfaction, StandardHours, StockOptionLevel, TotalWorkingYears, TrainingTimesLastYear, WorkLifeBalance, YearsAtCompany, YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager");
             foreach (var emp in employees)
             {
-                builder.AppendLine($"{emp.EmployeeNumber},{emp.Department},{emp.EmployeeCount},{emp.EnvironmentSatisfaction},{emp.Overtime},{emp.PerformanceRating},{emp.StockOptionLevel}");
+                builder.AppendLine($"{emp.EmployeeNumber},{emp.Department},{emp.EmployeeCount},{emp.EnvironmentSatisfaction},{emp.OverTime},{emp.PerformanceRating},{emp.StockOptionLevel}");
             }
 
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "EmployeeInfo.CSV");
@@ -157,10 +157,11 @@ namespace Project_2__26047179.Areas.Admin.Controllers
 
             //var jobInfo = await _db.JobInfo.Include(s => s.Employee).ToListAsync();
             //return View(jobInfo);
+            /*
             Employee employees = new Employee();
             List<CSVViewModel> CSVList = new List<CSVViewModel>();
             var clist = (from employeses in _db.Employee
-                         join jobInfos in _db.JobInfo on employees.Id equals jobInfos.EmployeeId
+                         join jobInfos in _db.Employee on employees.Id equals Id
                          select new { employeses.EmployeeNumber, employeses.EmployeeCount, employeses.Department, jobInfos.Education, jobInfos.NumCompaniesWorked }).ToList();
             if (clist != null)
             {
@@ -182,7 +183,9 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                 }
                 return View(CSVList);
             }
-            else { return View(); }
+            else { */
+                return View(); 
+            //}
         }
 
         public IActionResult Excel()
@@ -196,7 +199,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                 foreach (var emp in employees)
                 {
                     currentRow++;
-                    worksheet.Cell(currentRow, 1).Value = emp.EmployeeNumber + "," + emp.Department + "," + emp.EmployeeCount + "," + emp.EnvironmentSatisfaction + "," + emp.Overtime + "," + emp.PerformanceRating + "," + emp.StockOptionLevel;
+                    worksheet.Cell(currentRow, 1).Value = emp.EmployeeNumber + "," + emp.Department + "," + emp.EmployeeCount + "," + emp.EnvironmentSatisfaction + "," + emp.OverTime + "," + emp.PerformanceRating + "," + emp.StockOptionLevel;
                 }
                 using (var stream = new MemoryStream())
                 {

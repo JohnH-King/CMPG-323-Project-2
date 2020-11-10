@@ -1,5 +1,4 @@
-﻿@model Project_2__26047179.Models.ViewModels.PersonalAndEmployeeViewModel
-@using Project_2__26047179.Extensions
+﻿@model Project_2__26047179.Models.Employee
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,108 +10,98 @@
 <h1>Edit Personal Information</h1>
 <br />
 
-<partial name="_StatusMessage" model="Model.StatusMessage" />
+<!--partial name="_StatusMessage" model="Model.StatusMessage" /-->
 <fieldset>
     <div class="border" style="background-color: lightcyan; padding:10px;">
         <form asp-action="Edit">
-            <input type="hidden" asp-for="Personal.EmployeeId" /><!-- need the id inside the controller, gives Id to the controller-->
+            <input type="hidden" asp-for="Id" /><!-- need the id inside the controller, gives Id to the controller-->
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group row">
-                <div class="col-5">
-                    <label asp-for="Personal.EmployeeId" class="col-form-label"></label>
+                <div class="col-4">
+                    <label asp-for="EmployeeNumber" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <select id="ddlEmployeeList" asp-for="Personal.EmployeeId" disabled asp-items="Model.EmployeeList.ToSelectListItem(Model.Personal.EmployeeId)" class="form-control"></select>
+                    <input asp-for="EmployeeNumber" class="form-control" />
                 </div>
+                <span asp-validation-for="EmployeeNumber" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.Age" class="col-form-label"></label>
+                    <label asp-for="Age" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.Age" class="form-control" />
+                    <input asp-for="Age" class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.Age" class="text-danger"></span>
+                <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.Attrition" class="col-form-label"></label>
+                    <label asp-for="Attrition" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.Attrition" disabled class="form-control" />
+                    <input asp-for="Attrition" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.Attrition" class="text-danger"></span>
+                <span asp-validation-for="Attrition" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.BusinesssTravel" class="col-form-label"></label>
+                    <label asp-for="BusinessTravel" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.BusinesssTravel" disabled class="form-control" />
+                    <input asp-for="BusinessTravel" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.BusinesssTravel" class="text-danger"></span>
+                <span asp-validation-for="BusinessTravel" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.DailyRate" class="col-form-label"></label>
+                    <label asp-for="DailyRate" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.DailyRate" disabled class="form-control" />
+                    <input asp-for="DailyRate" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.DailyRate" class="text-danger"></span>
+                <span asp-validation-for="DailyRate" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.Gender" class="col-form-label"></label>
+                    <label asp-for="Gender" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.Gender" disabled class="form-control" />
+                    <input asp-for="Gender" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.Gender" class="text-danger"></span>
+                <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.MaritialStatus" class="col-form-label"></label>
+                    <label asp-for="MaritalStatus" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.MaritialStatus" disabled class="form-control" />
+                    <input asp-for="MaritalStatus" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.MaritialStatus" class="text-danger"></span>
+                <span asp-validation-for="MaritalStatus" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.Over18" class="col-form-label"></label>
+                    <label asp-for="Over18" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.Over18" disabled class="form-control" />
+                    <input asp-for="Over18" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.Over18" class="text-danger"></span>
+                <span asp-validation-for="Over18" class="text-danger"></span>
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Personal.RelationshipSatisfaction" class="col-form-label"></label>
+                    <label asp-for="RelationshipSatisfaction" class="col-form-label"></label>
                 </div>
                 <div class="col-5">
-                    <input asp-for="Personal.RelationshipSatisfaction" disabled class="form-control" />
+                    <input asp-for="RelationshipSatisfaction" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Personal.RelationshipSatisfaction" class="text-danger"></span>
+                <span asp-validation-for="RelationshipSatisfaction" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group row">
                 <div class="col-5 offset-1">
-                    <partial name="_EditAndBacktoListButton" model="Model.Personal.Id" />
-                </div>
-
-                <div class="col-3 offset-2 ">
-                    @if (Model.PersonalList.Count() > 0)
-                    {
-                        <p> Existing Personal Info: </p>
-
-                        <div id="PersonalList">
-                            <ul class="list-group"></ul>
-                        </div>
-                    }
+                    <partial name="_EditAndBacktoListButton" model="Model.Id" />
                 </div>
             </div>
 
