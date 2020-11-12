@@ -13,70 +13,323 @@
 <form method="post" asp-action="Edit">
     <div class="border" style="background-color: lightcyan; padding:10px;">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group col">
-            <div class="col-4">
-                <label asp-for="EmployeeNumber" class="col-form-label"></label>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="Age"></label>
             </div>
-            <div class="col-5">
-                <input asp-for="EmployeeNumber" class="form-control" />
+            <div class="col-6">
+                <input asp-for="Age" class="form-control" />
             </div>
-            <span asp-validation-for="EmployeeNumber" class="text-danger"></span>
+            <span asp-validation-for="Age" class="text-danger"></span>
         </div>
-        <div class="form-group col">
-            <div class="col-4">
-                <label asp-for="Department" class="col-form-label"></label>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Attrition"></label>
             </div>
-            <div class="col-5">
+            <div class="col-6">
+                <input asp-for="Attrition" class="form-control" />
+            </div>
+            <span asp-validation-for="Attrition" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="BusinessTravel"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="BusinessTravel" class="form-control" />
+            </div>
+            <span asp-validation-for="BusinessTravel" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DailyRate"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="DailyRate" class="form-control" />
+            </div>
+            <span asp-validation-for="DailyRate" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="Department"></label>
+            </div>
+            <div class="col-6">
                 <input asp-for="Department" class="form-control" />
             </div>
             <span asp-validation-for="Department" class="text-danger"></span>
         </div>
-        <div class="form-group col">
-            <div class="col-4">
-                <label asp-for="EmployeeCount" class="col-form-label"></label>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="DistanceFromHome"></label>
             </div>
-            <div class="col-5">
+            <div class="col-6">
+                <input asp-for="DistanceFromHome" class="form-control" />
+            </div>
+            <span asp-validation-for="DistanceFromHome" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Education"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Education" class="form-control" />
+            </div>
+            <span asp-validation-for="Education" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="EducationField"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="EducationField" class="form-control" />
+            </div>
+            <span asp-validation-for="EducationField" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="EmployeeCount"></label>
+            </div>
+            <div class="col-6">
                 <input asp-for="EmployeeCount" class="form-control" />
             </div>
             <span asp-validation-for="EmployeeCount" class="text-danger"></span>
         </div>
-        <div class="form-group col">
-            <div class="col-4">
-                <label asp-for="EnvironmentSatisfaction" class="col-form-label"></label>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="EmployeeNumber"></label>
             </div>
-            <div class="col-5">
+            <div class="col-6">
+                <input asp-for="EmployeeNumber" class="form-control" />
+            </div>
+            <span asp-validation-for="EmployeeNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="EnvironmentSatisfaction"></label>
+            </div>
+            <div class="col-6">
                 <input asp-for="EnvironmentSatisfaction" class="form-control" />
             </div>
             <span asp-validation-for="EnvironmentSatisfaction" class="text-danger"></span>
         </div>
-        <div class="form-group col">
-            <div class="col-2">
-                <label asp-for="OverTime" class="col-form-label"></label>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Gender"></label>
             </div>
-            <div class="col-5">
+            <div class="col-6">
+                <input asp-for="Gender" class="form-control" />
+            </div>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="HourlyRate"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="HourlyRate" class="form-control" />
+            </div>
+            <span asp-validation-for="HourlyRate" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="JobInvolvement"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="JobInvolvement" class="form-control" />
+            </div>
+            <span asp-validation-for="JobInvolvement" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="JobLevel"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="JobLevel" class="form-control" />
+            </div>
+            <span asp-validation-for="JobLevel" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="JobRole"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="JobRole" class="form-control" />
+            </div>
+            <span asp-validation-for="JobRole" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="JobSatisfaction"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="JobSatisfaction" class="form-control" />
+            </div>
+            <span asp-validation-for="JobSatisfaction" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="MaritalStatus"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="MaritalStatus" class="form-control" />
+            </div>
+            <span asp-validation-for="MaritalStatus" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="MonthlyIncome"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="MonthlyIncome" class="form-control" />
+            </div>
+            <span asp-validation-for="MonthlyIncome" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="MonthlyRate"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="MonthlyRate" class="form-control" />
+            </div>
+            <span asp-validation-for="MonthlyRate" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="NumCompaniesWorked"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="NumCompaniesWorked" class="form-control" />
+            </div>
+            <span asp-validation-for="NumCompaniesWorked" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Over18"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Over18" class="form-control" />
+            </div>
+            <span asp-validation-for="Over18" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="OverTime"></label>
+            </div>
+            <div class="col-6">
                 <input asp-for="OverTime" class="form-control" />
             </div>
             <span asp-validation-for="OverTime" class="text-danger"></span>
         </div>
-        <div class="form-group col">
-            <div class="col-4">
-                <label asp-for="PerformanceRating" class="col-form-label"></label>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="PercentSalaryHike"></label>
             </div>
-            <div class="col-5">
+            <div class="col-6">
+                <input asp-for="PercentSalaryHike" class="form-control" />
+            </div>
+            <span asp-validation-for="PercentSalaryHike" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="PerformanceRating"></label>
+            </div>
+            <div class="col-6">
                 <input asp-for="PerformanceRating" class="form-control" />
             </div>
             <span asp-validation-for="PerformanceRating" class="text-danger"></span>
         </div>
-        <div class="form-group col">
-            <div class="col-4">
-                <label asp-for="StockOptionLevel" class="col-form-label"></label>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="RelationshipSatisfaction"></label>
             </div>
-            <div class="col-5">
+            <div class="col-6">
+                <input asp-for="RelationshipSatisfaction" class="form-control" />
+            </div>
+            <span asp-validation-for="RelationshipSatisfaction" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="StandardHours"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="StandardHours" class="form-control" />
+            </div>
+            <span asp-validation-for="StandardHours" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="StockOptionLevel"></label>
+            </div>
+            <div class="col-6">
                 <input asp-for="StockOptionLevel" class="form-control" />
             </div>
             <span asp-validation-for="StockOptionLevel" class="text-danger"></span>
         </div>
-        <br/>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="TotalWorkingYears"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="TotalWorkingYears" class="form-control" />
+            </div>
+            <span asp-validation-for="TotalWorkingYears" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="TrainingTimesLastYear"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="TrainingTimesLastYear" class="form-control" />
+            </div>
+            <span asp-validation-for="TrainingTimesLastYear" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="WorkLifeBalance"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="WorkLifeBalance" class="form-control" />
+            </div>
+            <span asp-validation-for="WorkLifeBalance" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="YearsAtCompany"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="YearsAtCompany" class="form-control" />
+            </div>
+            <span asp-validation-for="YearsAtCompany" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3   ">
+                <label asp-for="YearsInCurrentRole"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="YearsInCurrentRole" class="form-control" />
+            </div>
+            <span asp-validation-for="YearsInCurrentRole" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="YearsSinceLastPromotion"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="YearsSinceLastPromotion" class="form-control" />
+            </div>
+            <span asp-validation-for="YearsSinceLastPromotion" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="YearsWithCurrManager"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="YearsWithCurrManager" class="form-control" />
+            </div>
+            <span asp-validation-for="YearsWithCurrManager" class="text-danger"></span>
+        </div>
+        <br />
         <div class="form-group row">
             <div class="col-5 offset-2">
                 <partial name="_EditAndBackToListButton" model="Model.Id" />

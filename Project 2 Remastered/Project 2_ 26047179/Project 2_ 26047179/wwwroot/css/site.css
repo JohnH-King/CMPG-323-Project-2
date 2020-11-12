@@ -59,6 +59,8 @@ html {
 
 fieldset {
     box-shadow: #000000 5px 5px 15px 10px;
+    width: 95%;
+    height: 95%;
 }
 
 button.accept-policy {
@@ -81,6 +83,7 @@ body {
     background-color: darkcyan;
     color: #fff;
     display: flex;
+    flex:1;
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -125,4 +128,11 @@ li {
     top: 1px;
     background: linear-gradient(to bottom, black 0%, darkcyan 100%);
     box-shadow: 10px 5px 5px black;
+}
+
+.conpages{
+    display: flex;
+    width: 95%;
+    height:95%;
+    
 }
