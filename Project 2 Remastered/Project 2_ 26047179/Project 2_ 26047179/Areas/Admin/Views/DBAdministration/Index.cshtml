@@ -1,65 +1,81 @@
 ﻿@model IEnumerable<Employee>
 @{
 }
+<style>
+    body {
+        background: #ccc;
+    }
 
+    .wrap {
+        width: 300px;
+        margin: 0 auto;
+        background: white;
+    }
 
-<div style="width:100%; height:100%; background-color: lightcyan; padding:10px; display: flex; flex:1; justify-content: space-between; flex-direction:column; ">
-    <div class="row">
-        <div class="col-6">
-            <h2 class="text-info">Employee List</h2>
+    table {
+        border: 1px solid red;
+        margin: 5px 0;
+    }
+</style>
+<body>
+    <div style="background-color: lightcyan; padding:10px; display: flex; flex:1; justify-content: space-between; flex-direction:column; ">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text-info">Employee List</h2>
+            </div>
+            <div class="col-6 text-right">
+                <partial name="_CreateButtonPartial" />
+            </div>
         </div>
-        <div class="col-6 text-right">
-            <partial name="_CreateButtonPartial" />
+
+
+        <div style="max-width:100%; height:100%; overflow-x:auto;">
+
+            <table id="DT_load" class="table table-striped table-bordered" style="max-width:100%; height:100%">
+                <thead>
+                    <tr>
+                        <th>Age</th>
+                        <th>Attrition</th>
+                        <th>BusinessTravel</th>
+                        <th>DailyRate</th>
+                        <th>Department</th>
+                        <th>DistanceFromHome</th>
+                        <th>Education</th>
+                        <th>EducationField</th>
+                        <th>EmployeeCount</th>
+                        <th data-class-name="priority">EmployeeNumber</th>
+                        <th>EnvironmentSatisfaction</th>
+                        <th>Gender</th>
+                        <th>HourlyRate</th>
+                        <th>JobInvolvement</th>
+                        <th>JobLevel</th>
+                        <th>JobRole</th>
+                        <th>JobSatisfaction</th>
+                        <th>MaritalStatus</th>
+                        <th>MonthlyIncome</th>
+                        <th>MonthlyRate</th>
+                        <th>NumCompaniesWorked</th>
+                        <th>Over18</th>
+                        <th>OverTime</th>
+                        <th>PercentSalaryHike</th>
+                        <th>PerformanceRating</th>
+                        <th>RelationshipSatisfaction</th>
+                        <th>StandardHours</th>
+                        <th>StockOptionLevel</th>
+                        <th>TotalWorkingYears</th>
+                        <th>TrainingTimesLastYear</th>
+                        <th>WorkLifeBalance</th>
+                        <th>YearsAtCompany</th>
+                        <th>YearsInCurrentRole</th>
+                        <th>YearsSinceLastPromotion</th>
+                        <th>YearsWithCurrManager</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
-    
-   
-    <div style="width:100%; height:100%; flex:1;">
-
-        <table id="DT_load" class="table table-striped table-bordered" style="width:100%; height:100%;">
-            <thead>
-                <tr>
-                    <th>Age</th>
-                    <th>Attrition</th>
-                    <th>BusinessTravel</th>
-                    <th>DailyRate</th>
-                    <th>Department</th>
-                    <th>DistanceFromHome</th>
-                    <th>Education</th>
-                    <th>EducationField</th>
-                    <th>EmployeeCount</th>
-                    <th data-class-name="priority">EmployeeNumber</th>
-                    <th>EnvironmentSatisfaction</th>
-                    <th>Gender</th>
-                    <th>HourlyRate</th>
-                    <th>JobInvolvement</th>
-                    <th>JobLevel</th>
-                    <th>JobRole</th>
-                    <th>JobSatisfaction</th>
-                    <th>MaritalStatus</th>
-                    <th>MonthlyIncome</th>
-                    <th>MonthlyRate</th>
-                    <th>NumCompaniesWorked</th>
-                    <th>Over18</th>
-                    <th>OverTime</th>
-                    <th>PercentSalaryHike</th>
-                    <th>PerformanceRating</th>
-                    <th>RelationshipSatisfaction</th>
-                    <th>StandardHours</th>
-                    <th>StockOptionLevel</th>
-                    <th>TotalWorkingYears</th>
-                    <th>TrainingTimesLastYear</th>
-                    <th>WorkLifeBalance</th>
-                    <th>YearsAtCompany</th>
-                    <th>YearsInCurrentRole</th>
-                    <th>YearsSinceLastPromotion</th>
-                    <th>YearsWithCurrManager</th>
-                    <th></th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div>
-
-    @section Scripts{
-        <script src="~/js/employeeList.js"></script>     }
+</body>
+@section Scripts{
+    <script src="~/js/employeeList.js"></script>
+}

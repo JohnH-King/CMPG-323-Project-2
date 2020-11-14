@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sK0mngRkYCgQgSKj7IE+cVu5NPp0QoGmXubbugbZFKIxtzyjrSqITXhGDA4jwhYnvdEQxzJ1e1aIB3cdB/Kybw==",
+  "dgSpecHash": "zovvaML7BfBv/FF5da2DhyF3sL/IBXFO6q77oWQGwOLoULjee7DGXNxtJW5Eq3gBuEHcx5OUCy7Hv2X3CTEplQ==",
   "success": true,
-  "projectFilePath": "C:\\Coding\\CMPG 323\\CMPG-323-Project-2\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\Project 2_ 26047179.csproj",
+  "projectFilePath": "C:\\Coding\\CMPG 323\\Broken after DT and import\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\Project 2_ 26047179.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\John\\.nuget\\packages\\chartjs\\20.2.3\\chartjs.20.2.3.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\cldrjs\\0.4.4\\cldrjs.0.4.4.nupkg.sha512",
