@@ -25,7 +25,7 @@ namespace Project_2__26047179.Models
 
         [Display(Name = "Distance From Home")]
         public int DistanceFromHome { get; set; }
-        public int Education { get; set; }
+        public string Education { get; set; }
 
         [Display(Name = "Education Field")]
         public string EducationField { get; set; }

@@ -136,3 +136,9 @@ li {
     height:95%;
     
 }
+
+#DT_load {
+    width: 100%;
+    overflow-x: auto;
+}
+ 

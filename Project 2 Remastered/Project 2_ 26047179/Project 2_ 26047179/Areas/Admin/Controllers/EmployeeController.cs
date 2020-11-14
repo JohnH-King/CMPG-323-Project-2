@@ -11,8 +11,6 @@ using Project_2__26047179.Models;
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("api/Employee")]
-    [ApiController]
     public class EmployeeController : Controller
     {
         [TempData]
@@ -27,27 +25,7 @@ namespace Project_2__26047179.Areas.Admin.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            return Json(new { data = await _db.Employee.ToListAsync() });
-        }
 
-        [HttpDelete]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var empFromDb = await _db.Employee.FirstOrDefaultAsync(u => u.Id == id);
-            if (empFromDb == null)
-            {
-                return Json(new { success = false, message = "Error while deleting" });
-            }
-            _db.Employee.Remove(empFromDb);
-            await _db.SaveChangesAsync();
-            return Json(new { success = true, message = "Delete successful" });
-        }
-    
-
-       
-        /* before datatable API
         //GET
         public async Task<IActionResult> Index()
         {//use dependency injection
@@ -145,6 +123,6 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                 return NotFound();
             }
             return View(employee);
-        }*/
+        }
     }
 }

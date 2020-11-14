@@ -1,0 +1,124 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+<head>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <style>
+        #chart_container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ddd;
+            padding: 1px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart_container">
+        <canvas id="bar_chart"></canvas>
+
+    </div>
+
+    <script>
+
+        var repArr = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REP) as String);
+        var ages = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.AGES) as String);
+
+        var ctx = $("#bar_chart");
+        var barChart = new Chart(ctx,{
+
+            type: 'bar',
+            data: {
+                labels: ages,
+                datasets: [{
+                    label: "Bar Chart",
+                    data: repArr,
+                    backgroundColor: ["rgba(242,166,52,.5)", "rgba(145, 65, 72, .5)", "rgba(74, 25, 92, .5)"],
+                    borderColor: ["rgba(242,166,52)", "rgba(145, 65, 72,)", "rgba(74, 25, 92)"],
+                    borderWidth:1
+                }]
+            },
+
+            options: {
+
+                maintainAspectRatio: false,
+                scales: { xAxes: [{ ticks: { beginAtZero: true } }] },
+                legend: { display: false }
+
+            },
+
+
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+@{ ViewData["Title"] = "Home Page"; }
+<html>
+<head>
+    <style>
+        #chart_container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ddd;
+            padding: 1px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <div style="width:100%; height:100%; flex:1; ">
+            dataPoints: @Html.Raw(ViewBag.DataPoints)
+            <div id="chart_container">
+                <canvas id="bar_chart"></canvas>
+
+            </div>
+            <script type="text/javascript">
+
+                window.onload = function () {
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        theme: "light2",
+                        animationEnabled: true,
+                        title: {
+                            text: "Simple Column Chart in ASP.NET MVC"
+                        },
+                        subtitles: [
+                            { text: "Try Resizing the Browser" }
+                        ],
+                        data: [
+                            {
+                                type: "column", //change type to bar, line, area, pie, etc
+                                dataPoints: [
+                                    { x: 10, y: 71 },
+                                    { x: 20, y: 55 },
+                                    { x: 30, y: 50 },
+                                    { x: 40, y: 65 },
+                                    { x: 50, y: 95 },
+                                    { x: 60, y: 68 },
+                                    { x: 70, y: 28 },
+                                    { x: 80, y: 34 },
+                                    { x: 90, y: 14 }
+                                ]
+                            }
+                        ]
+                    });
+                    chart.render();
+                };
+            </script>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 }
 
 
-<div style="width:100%; height:100%; background-color: lightcyan; padding:10px; display: flex; justify-content: space-between; flex-direction:column;">
+<div style="width:100%; height:100%; background-color: lightcyan; padding:10px; display: flex; flex:1; justify-content: space-between; flex-direction:column; ">
     <div class="row">
         <div class="col-6">
             <h2 class="text-info">Employee List</h2>
@@ -12,244 +12,54 @@
             <partial name="_CreateButtonPartial" />
         </div>
     </div>
+    
+   
+    <div style="width:100%; height:100%; flex:1;">
 
-    <form method="post">
-        @if (Model.Count() > 0)
-        {
-            <table class="table table-striped border col-12" style="display: flex; overflow-x: auto; overflow-y:auto">
-                <tr class="table-secondary">
-                    <th>
-                        <label asp-for="FirstOrDefault().Age"></label>
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().Attrition) <!--m=>m. lamda expression-->
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().BusinessTravel)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().DailyRate)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().Department)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().DistanceFromHome)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().Education)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().EducationField)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().EmployeeCount)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().EmployeeNumber)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().EnvironmentSatisfaction)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().Gender)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().HourlyRate)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().JobInvolvement)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().JobLevel)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().JobRole)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().JobSatisfaction)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().MaritalStatus)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().MonthlyIncome)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().MonthlyRate)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().NumCompaniesWorked)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().Over18)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().OverTime)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().PercentSalaryHike)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().PerformanceRating)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().RelationshipSatisfaction)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().StandardHours)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().StockOptionLevel)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().TotalWorkingYears)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().TrainingTimesLastYear)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().WorkLifeBalance)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().YearsAtCompany)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().YearsInCurrentRole)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().YearsSinceLastPromotion)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(m => m.FirstOrDefault().YearsWithCurrManager)
-                    </th>
-                    <th>
-                        Actions
-                    </th>
-
+        <table id="DT_load" class="table table-striped table-bordered" style="width:100%; height:100%;">
+            <thead>
+                <tr>
+                    <th>Age</th>
+                    <th>Attrition</th>
+                    <th>BusinessTravel</th>
+                    <th>DailyRate</th>
+                    <th>Department</th>
+                    <th>DistanceFromHome</th>
+                    <th>Education</th>
+                    <th>EducationField</th>
+                    <th>EmployeeCount</th>
+                    <th data-class-name="priority">EmployeeNumber</th>
+                    <th>EnvironmentSatisfaction</th>
+                    <th>Gender</th>
+                    <th>HourlyRate</th>
+                    <th>JobInvolvement</th>
+                    <th>JobLevel</th>
+                    <th>JobRole</th>
+                    <th>JobSatisfaction</th>
+                    <th>MaritalStatus</th>
+                    <th>MonthlyIncome</th>
+                    <th>MonthlyRate</th>
+                    <th>NumCompaniesWorked</th>
+                    <th>Over18</th>
+                    <th>OverTime</th>
+                    <th>PercentSalaryHike</th>
+                    <th>PerformanceRating</th>
+                    <th>RelationshipSatisfaction</th>
+                    <th>StandardHours</th>
+                    <th>StockOptionLevel</th>
+                    <th>TotalWorkingYears</th>
+                    <th>TrainingTimesLastYear</th>
+                    <th>WorkLifeBalance</th>
+                    <th>YearsAtCompany</th>
+                    <th>YearsInCurrentRole</th>
+                    <th>YearsSinceLastPromotion</th>
+                    <th>YearsWithCurrManager</th>
+                    <th></th>
                 </tr>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(m => item.Age)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Attrition)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.BusinessTravel)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.DailyRate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Department)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.DistanceFromHome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Education)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.EducationField)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.EmployeeCount)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.EmployeeNumber)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.EnvironmentSatisfaction)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Gender)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.HourlyRate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.JobInvolvement)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.JobLevel)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.JobRole)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.JobSatisfaction)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.MaritalStatus)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.MonthlyIncome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.MonthlyRate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.NumCompaniesWorked)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.Over18)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.OverTime)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.PercentSalaryHike)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.PerformanceRating)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.RelationshipSatisfaction)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.StandardHours)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.StockOptionLevel)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.TotalWorkingYears)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.TrainingTimesLastYear)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.WorkLifeBalance)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.YearsAtCompany)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.YearsInCurrentRole)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.YearsSinceLastPromotion)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(m => item.YearsWithCurrManager)
-                        </td>
-                        <td>
-                            <partial name="_TableButtonPartial" model="item.Id" />
-                        </td>
-                    </tr>
-                }
-            </table>
-        }
-        else
-        {
-            <p>No Employees available</p>
-        }
-    </form>
-
+            </thead>
+        </table>
+    </div>
 </div>
 
-
-<!--/div-->
+    @section Scripts{
+        <script src="~/js/employeeList.js"></script>     }
