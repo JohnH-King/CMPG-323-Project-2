@@ -33,23 +33,35 @@ namespace Project_2__26047179.Controllers
             var list = _db.Employee.ToList();
             List<int> repartitions = new List<int>();
             List<int> repartitionsc = new List<int>();
+            List<int> repartitionsd = new List<int>();
             var rep = repartitions;
             var repc = repartitionsc;
+            var repd = repartitionsd;
             var ages = list.Select(x => x.Age).Distinct();
-            var empCount = list.Select(x => x.Gender).Distinct();
+            var empCount = list.Select(x => x.JobRole).Distinct();
+
             foreach (var item in ages)
             {
                 repartitions.Add(list.Count((x => x.Age == item)));
             }
+            var department = list.Select(x => x.Department).Distinct();
+
+            foreach (var itemd in department)
+            {
+                repartitionsd.Add(list.Count((x => x.JobRole == itemd)));
+            }
+
             foreach (var items in empCount)
             {
-                repartitionsc.Add(list.Count((x => x.Gender == items)));
+                repartitionsc.Add(list.Count((x => x.JobRole == items)));
             }
-            
+
+            ViewBag.DEP = department;
             ViewBag.AGES = ages;
             ViewBag.EMPCOUNT = empCount;
             ViewBag.REP = repartitions.ToList();
             ViewBag.REPC = repartitionsc.ToList();
+            ViewBag.REPD = repartitionsd.ToList();
             return View();
         }
 

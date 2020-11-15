@@ -60,6 +60,12 @@ namespace Project_2__26047179.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Required]
+            public string Name { get; set; }
+
+            public string EmployeeNumber { get; set; }
+            public string UserRole { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)

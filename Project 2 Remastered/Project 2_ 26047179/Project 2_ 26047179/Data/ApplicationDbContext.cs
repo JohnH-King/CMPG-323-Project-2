@@ -15,6 +15,6 @@ namespace Project_2__26047179.Data
         }
 
         public DbSet<Employee> Employee { get; set; }
-
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }
