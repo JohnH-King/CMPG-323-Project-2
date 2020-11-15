@@ -27,23 +27,25 @@ namespace Project_2__26047179.Controllers
             _db = db;
         }
 
-
+        [HttpGet]
         public IActionResult Index()
         {
             var list = _db.Employee.ToList();
             List<int> repartitions = new List<int>();
             List<int> repartitionsc = new List<int>();
+            var rep = repartitions;
+            var repc = repartitionsc;
             var ages = list.Select(x => x.Age).Distinct();
-            var empCount = list.Select(s => s.EmployeeCount).Distinct();
+            var empCount = list.Select(x => x.Gender).Distinct();
             foreach (var item in ages)
             {
                 repartitions.Add(list.Count((x => x.Age == item)));
             }
-            foreach (var item in empCount)
+            foreach (var items in empCount)
             {
-                repartitionsc.Add(list.Count((x => x.EmployeeCount == item)));
+                repartitionsc.Add(list.Count((x => x.Gender == items)));
             }
-            var rep = repartitions;
+            
             ViewBag.AGES = ages;
             ViewBag.EMPCOUNT = empCount;
             ViewBag.REP = repartitions.ToList();

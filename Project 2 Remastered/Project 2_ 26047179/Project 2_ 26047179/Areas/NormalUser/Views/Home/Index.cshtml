@@ -35,28 +35,42 @@
 <script type="text/javascript">
     var ctx = document.getElementById('chartContainer').getContext('2d');
 
-    var repArr = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REP));
+        var repArr = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REP));
     var ages = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.AGES));
     var repArrC = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPC));
     var empCount = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.EMPCOUNT));
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-        type: 'bar',
 
-        // The data for our dataset
-        data: {
-            labels: ages,
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'rgb(255, 200, 132)',
-                borderColor: 'rgb(255, 220, 132)',
-                data: repArr
-            }]
-        },
 
-        // Configuration options go here
-        options: {}
-    });
+
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+      data: {
+      labels: ages,
+      datasets: [
+          {
+              label: ages,
+              yAxesGroup: 'A',
+              data: repArr
+          },
+          {
+              label: empCount,
+              yAxesGroup: 'B',
+              data: repArrC
+          }
+      ]
+  },
+    options: {
+      "horizontalLine": [{
+        "y": 140,
+        "style": "rgba(255, 255, 255, .4)",
+      }, {
+        "y": 120,
+        "style": "#ffffff",
+      }]
+    }
+  });
+
+
 </script>
                 
 

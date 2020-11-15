@@ -25,7 +25,6 @@ namespace Project_2__26047179.Areas.Admin.Controllers
 
 
         [HttpGet]
-
         //GET
         public async Task<IActionResult> Index()
         {//use dependency injection

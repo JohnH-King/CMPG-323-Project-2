@@ -9316,11 +9316,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Coding\\CMPG 323\\Broken after DT and import\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\Project 2_ 26047179.csproj",
+      "projectUniqueName": "C:\\Coding\\CMPG 323\\CMPG-323-Project-2\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\Project 2_ 26047179.csproj",
       "projectName": "Project 2_ 26047179",
-      "projectPath": "C:\\Coding\\CMPG 323\\Broken after DT and import\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\Project 2_ 26047179.csproj",
+      "projectPath": "C:\\Coding\\CMPG 323\\CMPG-323-Project-2\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\Project 2_ 26047179.csproj",
       "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-      "outputPath": "C:\\Coding\\CMPG 323\\Broken after DT and import\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\obj\\",
+      "outputPath": "C:\\Coding\\CMPG 323\\CMPG-323-Project-2\\Project 2 Remastered\\Project 2_ 26047179\\Project 2_ 26047179\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
