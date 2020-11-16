@@ -63,7 +63,7 @@ namespace Project_2__26047179.Models
         [Display(Name = "Monthly Income")]
         public int MonthlyIncome { get; set; }
 
-        [Display(Name = "Monthyly Rate")]
+        [Display(Name = "Monthy Rate")]
         public int MonthlyRate { get; set; }
 
         [Display(Name = "Number Of Companies Worked")]

@@ -16,6 +16,10 @@
     <Compile Remove="Data\Migrations\20201104183358_AddPersonalTableToDatabase.Designer.cs" />
     <Compile Remove="Data\Migrations\20201107141928_ChangeEmpNumToInt.cs" />
     <Compile Remove="Data\Migrations\20201107141928_ChangeEmpNumToInt.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201116191710_BugFixes.cs" />
+    <Compile Remove="Data\Migrations\20201116191710_BugFixes.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201116192526_addRegister2.cs" />
+    <Compile Remove="Data\Migrations\20201116192526_addRegister2.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +39,7 @@
   <ItemGroup>
     <Folder Include="Areas\NormalUser\Controllers\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
 </Project>
