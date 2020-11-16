@@ -499,16 +499,11 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csproj.CoreCompileInputs.cache
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.MvcApplicationPartsAssemblyInfo.cs
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.MvcApplicationPartsAssemblyInfo.cache
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\CSVHelper\Index.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DBAdministration\Index.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DBAdministration\Create.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DBAdministration\Edit.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DBAdministration\Delete.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DBAdministration\Details.cshtml.g.cs
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DataTable\Index.cshtml.g.cs
 C:\Coding\CMPG 323\Broken after DT and import\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Coding\CMPG 323\Broken after DT and import\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Debug\netcoreapp3.1\appsettings.json
@@ -1024,3 +1019,8 @@ C:\Coding\CMPG 323\Broken after DT and import\Project 2 Remastered\Project 2_ 26
 C:\Coding\CMPG 323\Broken after DT and import\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\NormalUser\Views\Home\Dashboard.cshtml.g.cs
 C:\Coding\CMPG 323\Broken after DT and import\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\NormalUser\Views\Home\Dashboard.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\DataTable\Edit.cshtml.g.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.csproj.CoreCompileInputs.cache
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.MvcApplicationPartsAssemblyInfo.cs
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Debug\netcoreapp3.1\Project 2_ 26047179.MvcApplicationPartsAssemblyInfo.cache

@@ -20,11 +20,6 @@ namespace Project_2__26047179.Areas.Admin.Controllers
             _db = db;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            return Json(new { data = await _db.Employee.ToListAsync() });
-        }
 
         public async Task<IActionResult> Index()
         {//use dependency injection

@@ -15,7 +15,7 @@
             border-radius: 4px;
         }
     </style>
-   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>
     <div class="text-center">
@@ -24,28 +24,38 @@
         <div style="background-color:yellow; color:black; width:100%; height:100%">
             <!--div id="chartContainer" style="width: 100%;"></!-div-->
             <canvas id="chartContainer"></canvas>
-            
+            <canvas id="pieContainer"></canvas>
+            <canvas id="stackedContainer"></canvas>
         </div>
     </div>
 </body>
 
 </html>
 @section Scripts{
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 <script type="text/javascript">
+
+  
+
     var ctx = document.getElementById('chartContainer').getContext('2d');
 
-        var repArr = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REP));
+    var repArr = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REP));
     var ages = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.AGES));
     var departments = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.DEP));
     var repArrC = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPC));
     var empCount = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.EMPCOUNT));
     var repArrD = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPD));
+    var roles = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ROLES));
+    var repArrR = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPR));
+    var arrMale = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPGM));
+    var repArrG = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPG));
+    var gender = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.GENDER));
+    var repfemale = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPGF));
 
     var data = {
-        labels: departments,
+        labels: roles,
         datasets: [{
-            label: 'Department',
+            label: 'Ages',
             fill: false,
             lineTension: 0,
             backgroundColor: "rgba(75,192,192,0.4)",
@@ -63,50 +73,63 @@
             pointHoverBorderWidth: 2,
             pointRadius: 4,
             pointHitRadius: 10,
-            data: repArrD,
-        },
-            {
-                label: 'JobRole',
-                fill: false,
-                lineTension: 0,
-                backgroundColor: "rgba(75,192,192,0.4)",
-                borderColor: "rgba(75,192,192,1)",
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: "rgba(75,192,192,1)",
-                pointBackgroundColor: "#fff",
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
-                pointHoverBorderWidth: 2,
-                pointRadius: 4,
-                pointHitRadius: 10,
-                data: repArrC,
-            }
-        ]
+            data: ages
+        }],
     };
 
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: data,
         options: {
-            "horizontalLine": [{
-                "y": 140,
-                "style": "rgba(255, 0, 0, .4)",
-            }, {
-                "y": 120,
-                "style": "#00ffff",
-            }]
+            title: {
+            display: true,
+            text: 'Ages represented in a Pie'
         }
+    }
     });
 
 
 
+    //PIE
+    ctx = document.getElementById('pieContainer').getContext('2d');
+    var dataPie = {
+        datasets: [{
+            data: repArrD
+        }],
 
+        // These labels appear in the legend and in the tooltips when hovering different arcs
+        labels: departments
+    };
 
+    var pieChart = new Chart(ctx, {
+        type: 'pie',
+        labels: departments,
+        data: dataPie
+    });
+
+    ctx = document.getElementById('stackedContainer').getContext('2d');
+    //stacked bar
+    var config = {
+        type: 'pie',
+        data: {
+            labels: ages,
+            datasets: [{
+                labels: ages,
+                data: repArr,
+                backgroundColor: 'rgb(255, 99, 132)'
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Ages represented in a Pie'
+            },
+            responsive: true
+        }
+    };
+
+        
+        var pieChart2 = new Chart(ctx, config);
 </script>
                 
 

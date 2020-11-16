@@ -8,7 +8,6 @@ using Project_2__26047179.Data;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
-    [Area("Admin")]
     [Route("api/Employee")]
     [ApiController]
     public class DTController : Controller
@@ -33,12 +32,12 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
-            var empFromDb = await _db.Employee.FirstOrDefaultAsync(u => u.Id == id);
-            if (empFromDb == null)
+            var employeeFromDb = await _db.Employee.FirstOrDefaultAsync(u => u.Id == id);
+            if (employeeFromDb == null)
             {
-                return Json(new { success = false, message = "Error while deleting" });
+                return Json(new { success = false, message = "Error while Deleting" });
             }
-            _db.Employee.Remove(empFromDb);
+            _db.Employee.Remove(employeeFromDb);
             await _db.SaveChangesAsync();
             return Json(new { success = true, message = "Delete successful" });
         }

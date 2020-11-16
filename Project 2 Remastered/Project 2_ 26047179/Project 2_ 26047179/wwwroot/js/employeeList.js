@@ -51,12 +51,12 @@ function loadDataTable() {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                    <a href="/EmployeeList/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
+                    <a href="/Admin/DBAdministration/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
                         Edit
                     </a>
                         &nbsp;
-                    <a class='btn btn-danger text-white' style='cursor:pointer; width:70px'
-                        onlick=Delete('/api/employee?id='+${data})>
+                    <a class='btn btn-danger text-white' style='cursor:pointer; width:100px'
+                        onclick=Delete('/api/employee?id='+${data})>
                         Delete
                     </a>
                     </div>`;
@@ -75,6 +75,7 @@ function Delete(url) {
         title: "Are you sure?",
         text: "Once deleted, you will not be able to recover",
         icon: "warning",
+        buttons: true,
         dangerMode: true
     }).then((willDelete) => {
         if (willDelete) {

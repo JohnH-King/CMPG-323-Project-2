@@ -17,8 +17,7 @@ $(function () {
     });
 });
 
-/*another working one
- *     var ctx = document.getElementById('chartContainer').getContext('2d');
+   var ctx = document.getElementById('chartContainer').getContext('2d');
 
         var repArr = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REP));
     var ages = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.AGES));
