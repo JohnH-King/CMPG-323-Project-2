@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 function loadDataTable() {
-    dataTable = $('#DT_load').DataTable({
+    $.fn.dataTable.fixedHeader = $('#DT_load').DataTable({
         "ajax": {
             "url": "/api/Employee",
             "type": "GET",
@@ -66,7 +66,10 @@ function loadDataTable() {
         "language": {
             "emptyTable": "no data found"
         },
-        "width": "100%"
+        "width": "100%", "scrollY": true,
+        "scrollX": "true",
+        "scrollCollapse": "true",
+        "paging": "false"
     });
 }
 

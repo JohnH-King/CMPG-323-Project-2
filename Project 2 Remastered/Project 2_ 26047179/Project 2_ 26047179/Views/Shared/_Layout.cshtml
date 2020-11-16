@@ -15,7 +15,15 @@
 
     <link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
     <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/24a048a285.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -57,29 +65,41 @@
                 </div>
             </div>
         </nav>
-    </header><br /><br />
+    </header><br /><br /><fieldset>
+        <div class="Container">
+            <main role="main">
+                @RenderBody()
+                <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
+                <script>
+                    //ScrollToTop button
+                    var mybutton = document.getElementById("ScrollToTop");
 
-    <div class="container">
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
+                    window.onscroll = function () { scrollFunction() };
 
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            mybutton.style.display = "block";
+                        } else {
+                            mybutton.style.display = "none";
+                        }
+                    }
+
+                    function topFunction() {
+                        document.body.scrollTop = 0;
+                        document.documentElement.scrollTop = 0;
+                    }
+                </script>
+            </main>
+        </div>
+    </fieldset>
     <footer class="border-top footer text-white-50" style="background-color: #343a40;">
         <div class="container">
             &copy; 2020 - Project_2__26047179
         </div>
     </footer>
 
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script src="https://kit.fontawesome.com/24a048a285.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+ 
     @RenderSection("Scripts", required: false)
 </body>
 </html>
