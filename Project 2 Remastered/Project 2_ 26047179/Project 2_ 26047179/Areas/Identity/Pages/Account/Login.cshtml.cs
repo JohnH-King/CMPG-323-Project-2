@@ -102,7 +102,7 @@ namespace Project_2__26047179.Areas.Identity.Pages.Account
             }
 
             // If we got this far, something failed, redisplay form
-            return LocalRedirect(returnUrl);
+            return Page();
         }
     }
 }

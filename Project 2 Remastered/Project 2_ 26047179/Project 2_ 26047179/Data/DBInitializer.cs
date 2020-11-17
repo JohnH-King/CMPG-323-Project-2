@@ -48,6 +48,7 @@ namespace Project_2__26047179.Data
                 UserName = "admin@gmail.com",
                 Email = "admin@gmail.com",
                 EmployeeNumber = "0",
+                UserRole = "Admin",
                 EmailConfirmed = true,
                 PhoneNumber = "0794602235"
             }, "Admin123*").GetAwaiter().GetResult();
