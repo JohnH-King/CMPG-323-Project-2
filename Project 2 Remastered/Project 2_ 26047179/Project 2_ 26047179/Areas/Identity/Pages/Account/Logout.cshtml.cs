@@ -36,7 +36,7 @@ namespace Project_2__26047179.Areas.Identity.Pages.Account
             }
             else
             {
-                return RedirectToPage();
+                return RedirectToPage("Logout");
             }
         }
     }
