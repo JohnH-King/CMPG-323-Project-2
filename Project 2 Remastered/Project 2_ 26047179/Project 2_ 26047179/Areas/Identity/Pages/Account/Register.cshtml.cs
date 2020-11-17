@@ -132,10 +132,11 @@ namespace Project_2__26047179.Areas.Identity.Pages.Account
                             }
                         }
                     }
+                    _logger.LogInformation("User created a new account with password.");
 
                     return RedirectToAction("Index", "User", new { area = "Admin" });
 
-                    _logger.LogInformation("User created a new account with password.");
+                    
 
                     //Email for user creation
 

@@ -39,6 +39,19 @@ namespace Project_2__26047179
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            //changes made from 2.2 to 3
+            services.ConfigureApplicationCookie(options =>
+
+            {
+
+                options.LoginPath = $"/Identity/Account/Login";
+
+                options.LogoutPath = $"/Identity/Account/Logout";
+
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,5 +84,6 @@ namespace Project_2__26047179
                 endpoints.MapRazorPages();
             });
         }
+
     }
 }

@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Project_2__26047179.Data;
 using Project_2__26047179.Models;
 using Project_2__26047179.Models.ViewModels;
+using Project_2__26047179.Utility;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
+    [Authorize(Roles = SD.ManagerUser)]
     [Area("admin")]
     public class PersonalController : Controller
     {

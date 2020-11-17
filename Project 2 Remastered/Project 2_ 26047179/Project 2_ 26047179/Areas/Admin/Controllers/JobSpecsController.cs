@@ -8,9 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using Project_2__26047179.Data;
 using Project_2__26047179.Models;
 using Project_2__26047179.Models.ViewModels;
+using Project_2__26047179.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
+    [Authorize(Roles = SD.ManagerUser)]
     [Area("Admin")]
     public class JobSpecsController : Controller
     {        
