@@ -7,7 +7,7 @@
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "Project22604717920201117163231ResourceGroup",
+      "defaultValue": "26047179Project2ResourceGroup",
       "metadata": {
         "description": "Name of the resource group for the resource. It is recommended to put resources under same resource group for better tracking."
       }
@@ -21,7 +21,7 @@
     },
     "resourceName": {
       "type": "string",
-      "defaultValue": "26047179Project2",
+      "defaultValue": "Project226047179202011",
       "metadata": {
         "description": "Name of the main resource to be created by this template."
       }

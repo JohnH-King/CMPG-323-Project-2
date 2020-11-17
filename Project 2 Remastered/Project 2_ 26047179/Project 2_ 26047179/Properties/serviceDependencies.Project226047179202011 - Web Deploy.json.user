@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2020-11-17T14:53:33.130952Z"
+      "restoreTime": "2020-11-17T20:17:37.4627831Z"
     }
   },
   "parameters": {
@@ -12,7 +12,7 @@
     },
     "mssql1.resourceGroupName": {
       "Type": "resourceGroup",
-      "Value": "Project22604717920201117163231ResourceGroup"
+      "Value": "26047179Project2ResourceGroup"
     }
   }
 }

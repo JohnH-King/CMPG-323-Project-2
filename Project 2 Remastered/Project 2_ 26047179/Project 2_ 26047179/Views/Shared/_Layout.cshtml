@@ -51,7 +51,7 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if (User.IsInRole(SD.NormalUser))
                         {
-                    <a class="nav-link" asp-action="Index" asp-controller="DataView" asp-area="NormalUser">Database View</a>
+                    <a class="nav-link" asp-action="Index" asp-controller="DataView" asp-area="NormalUser">Database View</a><a class="nav-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
               
  <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
                         @if (User.IsInRole(SD.ManagerUser))

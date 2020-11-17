@@ -1,11 +1,8 @@
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\appsettings.json
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\launchSettings.json
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\serviceDependencies.26047179Project2 - Web Deploy.json
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\serviceDependencies.json
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\serviceDependencies.local.json
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\26047179Project2 - Web Deploy\mssql1.arm.json
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\26047179Project2 - Web Deploy\profile.arm.json
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Project 2_ 26047179.StaticWebAssets.xml
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Project 2_ 26047179.exe
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Project 2_ 26047179.deps.json
@@ -408,7 +405,6 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.AssemblyInfoInputs.cache
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.AssemblyInfo.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.csproj.CoreCompileInputs.cache
@@ -519,3 +515,7 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.dll
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.pdb
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.genruntimeconfig.cache
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\serviceDependencies.Project226047179202011 - Web Deploy.json
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Project226047179202011 - Web Deploy\mssql1.arm.json
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Project226047179202011 - Web Deploy\profile.arm.json
+C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Project 2_ 26047179.csprojAssemblyReference.cache
