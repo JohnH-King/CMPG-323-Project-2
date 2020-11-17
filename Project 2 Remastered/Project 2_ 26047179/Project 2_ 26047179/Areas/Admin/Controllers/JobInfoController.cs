@@ -13,7 +13,7 @@ using Project_2__26047179.Utility;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
-    [Authorize(Roles = SD.ManagerUser)]
+    [Authorize(Roles = SD.SuperUser)]
     [Area("admin")]
     public class JobInfoController : Controller
     {

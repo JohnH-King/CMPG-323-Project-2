@@ -51,13 +51,8 @@ function loadDataTable() {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                    <a href="/Admin/DBAdministration/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:100%'>
-                        Edit
-                    </a>
-                        &nbsp;
-                    <a class='btn btn-danger text-white' style='cursor:pointer; width:100%'
-                        onclick=Delete('/api/employee?id='+${data})>
-                        Delete
+                    <a href="/Admin/DBAdministration/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
+                        No Action Available
                     </a>
                     </div>`;
                 }, "width": "40%"

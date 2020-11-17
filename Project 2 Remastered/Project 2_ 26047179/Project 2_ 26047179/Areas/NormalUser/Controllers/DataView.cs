@@ -2,36 +2,45 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Project_2__26047179.Data;
 using Project_2__26047179.Models;
-using Project_2__26047179.Models.ViewModels;
 using Project_2__26047179.Utility;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
-    [Authorize(Roles = SD.SuperUser)]
-    [Area("admin")]
-    public class PersonalController : Controller
+    [Authorize(Roles = SD.NormalUser)]
+    [Area("NormalUser")]
+    public class DataView : Controller
     {
+
         private readonly ApplicationDbContext _db;
 
-        [TempData]
-        public string StatusMessage { get; set; }
-
-        public PersonalController(ApplicationDbContext db)
+        public DataView(ApplicationDbContext db)
         {
             _db = db;
         }
 
-        //GET Index
+
         public async Task<IActionResult> Index()
         {//use dependency injection
             return View(await _db.Employee.ToListAsync());
         }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var employeeFromDb = _db.Employee.FirstOrDefaultAsync(u => u.Id == id);
+            if (employeeFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while Deleting" });
+            }
+            //_db.Employee.Remove(employeeFromDb);
+            await _db.SaveChangesAsync();
+            return Json(new { success = true, message = "Delete successful" });
+        }
+
 
         //Get - Create
         public IActionResult Create()
@@ -94,21 +103,6 @@ namespace Project_2__26047179.Areas.Admin.Controllers
                 return NotFound();
             }
             return View(employee);
-        }
-
-        //POST - DELETE
-        [HttpPost, ActionName("Delete")]    //is a delete action method
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id) //id = @model, Has to have a value != null
-        {
-            var employee = await _db.Employee.FindAsync(id);
-            if (employee == null)
-            {
-                return NotFound();  //or to the View
-            }
-            _db.Employee.Remove(employee);
-            await _db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         //GET - DETAILS

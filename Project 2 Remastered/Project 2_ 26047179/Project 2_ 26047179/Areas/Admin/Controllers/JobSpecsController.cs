@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
 {
-    [Authorize(Roles = SD.ManagerUser)]
+    [Authorize(Roles = SD.SuperUser)]
     [Area("Admin")]
     public class JobSpecsController : Controller
     {        

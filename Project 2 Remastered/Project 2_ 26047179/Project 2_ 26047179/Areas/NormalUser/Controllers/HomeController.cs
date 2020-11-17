@@ -12,12 +12,12 @@ using Microsoft.IdentityModel.Tokens;
 using Project_2__26047179.Models;
 using Project_2__26047179.Data;
 using System.Runtime.Serialization;
-using Project_2__26047179.Utility;
 using Microsoft.AspNetCore.Authorization;
+using Project_2__26047179.Utility;
 
 namespace Project_2__26047179.Controllers
 {
-    [Authorize(Roles = SD.ManagerUser)]
+    [Authorize(Roles = SD.NormalUser)]
     [Area("NormalUser")]
     public class HomeController : Controller
     {

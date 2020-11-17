@@ -30,9 +30,18 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3" id="navDiv">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-6" id="navDiv">
             <div class="container">
-                <a class="navbar-brand" style="width:100%;" asp-area="NormalUser" asp-controller="Home" asp-action="Index">Project_2__26047179</a>
+                @if (User.IsInRole(SD.NormalUser))
+                {
+    <a class="navbar-brand" style="width:100%;" asp-area="NormalUser" asp-controller="Home" asp-action="Index"><i class="fas fa-table"></i> &nbsp; 26047179</a>            }
+                @if (User.IsInRole(SD.ManagerUser))
+                {
+    <a class="navbar-brand" style="width:100%;" asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index"><i class="fas fa-table"></i> &nbsp; 26047179 Admin</a>            }
+                @if (User.IsInRole(SD.SuperUser))
+                {
+    <a class="navbar-brand" style="width:100%;"><i class="fas fa-table"></i> &nbsp; 26047179 Super User</a>            }
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -40,36 +49,42 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" style="width:100%;">
 
                     <ul class="navbar-nav flex-grow-1">
+                        @if (User.IsInRole(SD.NormalUser))
+                        {
+                    <a class="nav-link" asp-action="Index" asp-controller="DataView" asp-area="NormalUser">Database View</a>
+              
+ <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
+                        @if (User.IsInRole(SD.ManagerUser))
+                        {
+            <li class="nav-item dropdown text-white-50">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Content Management
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                    <a class="dropdown-item" asp-action="Index" asp-controller="DBAdministration" asp-area="Admin">Database View</a>
+                    <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
+                </div>
+            </li>
+ <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
+                        @if (User.IsInRole(SD.SuperUser))
+                        {
+            <li class="nav-item dropdown text-white-50">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Content Management
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                    <a class="dropdown-item" asp-action="Index" asp-controller="Employee" asp-area="Admin">Employee</a>
+                    <a class="dropdown-item" asp-action="Index" asp-controller="JobSpecs" asp-area="Admin">Job Specifications</a>
+                    <a class="dropdown-item" asp-action="Index" asp-controller="JobInfo" asp-area="Admin">Job Experience</a>
+                    <a class="dropdown-item" asp-action="Index" asp-controller="Personal" asp-area="Admin">Personal Information</a>
+                    <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
+                </div>
+            </li>
+}
 
-                        @if(User.IsInRole(SD.ManagerUser))
-                        { 
-                        <li class="nav-item dropdown text-white-50">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Content Management
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
-                                <a class="dropdown-item" asp-action="Index" asp-controller="DBAdministration" asp-area="Admin">Database View</a>
-                                <a class="dropdown-item" asp-action="Index" asp-controller="Employee" asp-area="Admin">Employee</a>
-                                <a class="dropdown-item" asp-action="Index" asp-controller="JobSpecs" asp-area="Admin">Job Specifications</a>
-                                <a class="dropdown-item" asp-action="Index" asp-controller="JobInfo" asp-area="Admin">Job Experience</a>
-                                <a class="dropdown-item" asp-action="Index" asp-controller="Personal" asp-area="Admin">Personal Information</a>
-                                <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Contact</a>
-                        </li>
-                        <!--li class="nav-item"-->
-                        <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a-->
-                        <!---li-->
+
                         <li style="padding-left:20px; margin-left:20px; border-left:ridge; border-color:orangered">
                             <partial name="_LoginPartial" />
-                        </li>
-                        }
-                        <li style="color:white">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-table"></i> &nbsp; Dashboard
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -109,7 +124,7 @@
     </footer>
 
 
- 
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
