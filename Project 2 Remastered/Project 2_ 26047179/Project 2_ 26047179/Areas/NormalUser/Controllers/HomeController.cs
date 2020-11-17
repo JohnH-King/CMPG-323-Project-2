@@ -17,7 +17,7 @@ using Project_2__26047179.Utility;
 
 namespace Project_2__26047179.Controllers
 {
-    [Authorize(Roles = SD.NormalUser)]
+    [Authorize(Roles = SD.NormalUser + "," + SD.ManagerUser)]
     [Area("NormalUser")]
     public class HomeController : Controller
     {
