@@ -60,7 +60,7 @@ function loadDataTable() {
                         Delete
                     </a>
                     </div>`;
-                }, "width": "40%"
+                }, "width": "39%"
             }
         ],
         "language": {
@@ -69,7 +69,10 @@ function loadDataTable() {
         "width": "100%", "scrollY": true,
         "scrollX": "true",
         "scrollCollapse": "true",
-        "paging": "false"
+        "paging": "true",
+        "fixedColumns": {
+            "rightColumns": "1"
+        }
     });
 }
 

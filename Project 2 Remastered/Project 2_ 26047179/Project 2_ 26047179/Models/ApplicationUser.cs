@@ -12,5 +12,10 @@ namespace Project_2__26047179.Models
         [Required]
         public string UserRole { get; set; }
         public string EmployeeNumber { get; set; }
+
+        public static implicit operator ApplicationUser(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

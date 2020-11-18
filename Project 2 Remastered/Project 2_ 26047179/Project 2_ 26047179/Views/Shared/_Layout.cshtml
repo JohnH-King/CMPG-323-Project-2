@@ -30,17 +30,21 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-6" id="navDiv">
+        <nav class="navbar navbar-expand navbar-toggleable navbar-dark bg-dark border-bottom box-shadow mb-6" id="navDiv">
             <div class="container">
                 @if (User.IsInRole(SD.NormalUser))
                 {
-    <a class="navbar-brand" style="width:100%;" asp-area="NormalUser" asp-controller="Home" asp-action="Index"><i class="fas fa-table"></i> &nbsp; 26047179</a>            }
-                @if (User.IsInRole(SD.ManagerUser))
-                {
-    <a class="navbar-brand" style="width:100%;" asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index"><i class="fas fa-table"></i> &nbsp; 26047179 Admin</a>            }
-                @if (User.IsInRole(SD.SuperUser))
-                {
-    <a class="navbar-brand" style="width:100%;"><i class="fas fa-table"></i> &nbsp; 26047179 Super User</a>            }
+            <a class="navbar-brand" style="width:100%;" asp-area="NormalUser" asp-controller="Home" asp-action="Index"><i class="fas fa-table"></i> &nbsp; 26047179</a> }
+        else if (User.IsInRole(SD.ManagerUser))
+        {
+            <a class="navbar-brand" style="width:100%;" asp-area="Admin" asp-controller="HomeAdmin" asp-action="Index"><i class="fas fa-table"></i> &nbsp; 26047179 Admin</a> }
+        else if (User.IsInRole(SD.SuperUser))
+        {
+            <a class="navbar-brand" style="width:100%;"><i class="fas fa-table"></i> &nbsp; 26047179 Super User</a> }
+        else
+        {
+            <a class="navbar-brand" style="width:100%;"><i class="fas fa-table"></i> &nbsp; 26047179 Not a User</a>
+        }
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -51,9 +55,7 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if (User.IsInRole(SD.NormalUser))
                         {
-                    <a class="nav-link" asp-action="Index" asp-controller="DataView" asp-area="NormalUser">Database View</a><a class="nav-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
-              
- <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
+            <a class="nav-link" asp-action="Index" asp-controller="DataView" asp-area="NormalUser">Database View</a> <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
                         @if (User.IsInRole(SD.ManagerUser))
                         {
             <li class="nav-item dropdown text-white-50">
@@ -64,8 +66,7 @@
                     <a class="dropdown-item" asp-action="Index" asp-controller="DBAdministration" asp-area="Admin">Database View</a>
                     <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
                 </div>
-            </li>
- <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
+            </li> <!--li class="nav-item"--> <!--<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a--> <!---li-->}
                         @if (User.IsInRole(SD.SuperUser))
                         {
             <li class="nav-item dropdown text-white-50">
@@ -79,8 +80,7 @@
                     <a class="dropdown-item" asp-action="Index" asp-controller="Personal" asp-area="Admin">Personal Information</a>
                     <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
                 </div>
-            </li>
-}
+            </li>}
 
 
                         <li style="padding-left:20px; margin-left:20px; border-left:ridge; border-color:orangered">
@@ -90,15 +90,14 @@
                 </div>
             </div>
         </nav>
-    </header><br /><br /><fieldset>
-        <div class="Container">
+    </header><br /><br />
+        <div class="Container" style="width:100%;">
             <main role="main">
                 @RenderBody()
                 <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
                 <script>
                     //ScrollToTop button
                     var mybutton = document.getElementById("ScrollToTop");
-
                     window.onscroll = function () { scrollFunction() };
 
                     function scrollFunction() {
@@ -116,8 +115,7 @@
                 </script>
             </main>
         </div>
-    </fieldset>
-    <footer class="border-top footer text-white-50" style="background-color: #343a40;">
+  <footer class="border-top footer text-white-50" style="background-color: #343a40;">
         <div class="container">
             &copy; 2020 - Project_2__26047179
         </div>

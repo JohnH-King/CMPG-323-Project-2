@@ -25,12 +25,13 @@ namespace Project_2__26047179.Areas.Admin.Controllers
         {
             _db = db;
         }
-
+                
 
         [HttpGet]
         //GET
         public async Task<IActionResult> Index()
         {//use dependency injection
+
             return View( await _db.Employee.ToListAsync());
         }
 

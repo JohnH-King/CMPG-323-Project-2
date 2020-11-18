@@ -58,10 +58,11 @@ html {
 }
 
 fieldset {
-    flex:1;
+    flex: 1;
     box-shadow: #000000 5px 5px 15px 10px;
-    width: 96%;
+    max-width: 90%;
     height: 100%;
+    margin: auto;
 }
 
 button.accept-policy {
@@ -74,6 +75,7 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
+  flex-direction: column;
 }
 
 
@@ -81,10 +83,10 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     font-family: Courier New,Arial,Optima;
-    background-color: darkcyan;
+    background-color: #2F4F4F;
     color: #fff;
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -172,3 +174,11 @@ li {
     #ScrollToTop:hover {
         background-color: #555; /* Add a dark-grey background on hover */
     }
+
+#logs {
+    background-color: #20B2AA;padding:40px; max-width:50%
+}
+
+#editF{     
+    padding:20px
+}
