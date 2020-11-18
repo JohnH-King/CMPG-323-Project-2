@@ -51,7 +51,7 @@ function loadDataTable() {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                    <a href="/Admin/DBAdministration/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
+                    <a class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
                         No Action Available
                     </a>
                     </div>`;
@@ -61,10 +61,7 @@ function loadDataTable() {
         "language": {
             "emptyTable": "no data found"
         },
-        "width": "100%", "scrollY": true,
-        "scrollX": "true",
-        "scrollCollapse": "true",
-        "paging": "false"
+        "width": "100%"
     });
 }
 

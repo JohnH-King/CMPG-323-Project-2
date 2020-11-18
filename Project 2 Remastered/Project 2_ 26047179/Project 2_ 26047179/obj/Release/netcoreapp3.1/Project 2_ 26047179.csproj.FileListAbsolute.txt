@@ -427,9 +427,6 @@ C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\P
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Employee\Details.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Employee\Edit.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\Employee\Index.cshtml.g.cs
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\HomeAdmin\Dashboard.cshtml.g.cs
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\HomeAdmin\Index.cshtml.g.cs
-C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\HomeAdmin\Privacy.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\JobInfo\Create.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\JobInfo\Delete.cshtml.g.cs
 C:\Coding\CMPG 323\CMPG-323-Project-2\Project 2 Remastered\Project 2_ 26047179\Project 2_ 26047179\obj\Release\netcoreapp3.1\Razor\Areas\Admin\Views\JobInfo\Details.cshtml.g.cs

@@ -10,7 +10,6 @@
         <div >
             <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
                 <h4>Create a new account.</h4>
-                <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Input.Email"></label>
@@ -39,18 +38,22 @@
                 </div>
                 <div class="form-group">
 
-                  
+
                 </div>
                 @if (User.IsInRole(SD.ManagerUser))
                 {
-    <div class="form-group">
 
-        <div class="form-group row">
-            <input type="radio" name="rdUserRole" value="@SD.NormalUser" checked /> @SD.NormalUser
-            <input type="radio" name="rdUserRole" value="@SD.ManagerUser" checked /> @SD.ManagerUser
-            <input type="radio" name="rdUserRole" value="@SD.SuperUser" checked /> @SD.SuperUser
-        </div>
-    </div>}
+            <div class="form-group row">
+                <div class="form-group col">
+                    <input type="radio" style="margin:1px" name="rdUserRole" value="@SD.NormalUser" checked /> @SD.NormalUser
+                </div>
+                <div class="form-group col">
+                    <input type="radio" style="margin: 1px" name="rdUserRole" value="@SD.ManagerUser" checked /> @SD.ManagerUser
+                </div>
+                <div class="form-group col">
+                    <input type="radio" style="margin: 1px" name="rdUserRole" value="@SD.SuperUser" checked /> @SD.SuperUser
+                </div></div>
+                }
 
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>

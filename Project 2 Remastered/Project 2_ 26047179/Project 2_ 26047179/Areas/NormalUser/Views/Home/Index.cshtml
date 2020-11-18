@@ -1,49 +1,31 @@
 ﻿@model IEnumerable<Employee>
-@{ 
-    ViewData["Title"] = "Home Page";
-    
-}
+@{ ViewData["Title"] = "Home Page"; }
 
 <html>
 <head>
-    <style>
-        #chart_container {
-            width: 400px;
-            height: 400px;
-            border: 1px solid #ddd;
-            padding: 1px;
-            border-radius: 4px;
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>
-    <fieldset>
-        <div style="        background-color: #F0FFFF;
-        color: black;
-        width: 100%;
-        height: 100%;
-        padding: 10px">
-            <div class="col-12">
-                <!--div id="chartContainer" style="width: 100%;"></!-div-->
-                <canvas id="chartContainer" style="width:100%"></canvas>
+    <fieldset id="normalField" style="width:80%">
+        <div class="col" style=" margin:0px; padding:1px">
+            <div style="margin:1px">
+                <canvas id="chartContainer"></canvas>
+            </div><hr />
+            <div style="margin:1px">
+                <canvas id="pieContainer"></canvas>
+                </div>
             </div>
-            <div class="col-12">
-                <canvas id="pieContainer" style="width:100%"></canvas>
 
-            </div>
-        </div><div class="col">
-            <canvas id="stackedContainer" style="width:100%"></canvas>
-        </div>
-    </fieldset>
+
+</fieldset>
 </body>
 
 </html>
 @section Scripts{
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-  
+
 
     var ctx = document.getElementById('chartContainer').getContext('2d');
 
@@ -56,39 +38,45 @@
     var roles = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ROLES));
     var repArrR = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPR));
     var arrMale = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPGM));
-    var repArrG = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPG));
-    var gender = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.GENDER));
-    var repfemale = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPGF));
+    var arrFemale = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPGF));
+    var gMales = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.MALES));
+        var gFemales = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.FEMALES));
 
-    var data = {
-        labels: roles,
-        datasets: [{
-            label: 'Ages',
-            fill: false,
-            lineTension: 0,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 4,
-            pointHitRadius: 10,
-            data: ages
-        },
-            {
-                label: 'roles',
-                data: arrMale,
-                backgroundColor: 'rgb(255, 99, 132)',
-                hoverBackgroundColor: '#2196F3'
-            }]
+    var hourlyRate = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.HRATE));
+    var arrHRate = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.HR));
+
+    var gender = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.GENDER));
+        var regArrG = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPG));
+   // var repfemale = Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.REPGF));
+
+     var data = {
+            labels: roles,
+            datasets: [{
+                label: 'Count',
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "rgba(75,192,192,1)",
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: "rgba(75,192,192,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 4,
+                pointHitRadius: 10,
+                data: ages
+            },
+                {
+                label: 'Hourly Rate',
+                data: hourlyRate
+                }
+            ]
     };
 
     var myChart = new Chart(ctx, {
@@ -97,7 +85,7 @@
         options: {
             title: {
             display: true,
-            text: 'Ages represented in a Pie'
+            text: 'Sum of employees per department'
         }
     }
     });
@@ -118,34 +106,18 @@
     var pieChart = new Chart(ctx, {
         type: 'pie',
         labels: departments,
-        data: dataPie
-    });
-
-    ctx = document.getElementById('stackedContainer').getContext('2d');
-    //stacked bar
-    var config = {
-        type: 'pie',
-        data: {
-            labels: ages,
-            datasets: [{
-                labels: 'Age',
-                data: repArr,
-                backgroundColor: 'rgb(255, 99, 132)',
-                hoverBackgroundColor: '#2196F3'
-            }]
-        },
+        data: dataPie,
         options: {
             title: {
                 display: true,
-                text: 'Ages of those employed displayed distributed'
+                text: 'Role distribution'
             },
             responsive: true
         }
-    };
+    });
 
-        
-        var pieChart2 = new Chart(ctx, config);
-</script>
-                
 
-            }
+    </script>
+
+
+}

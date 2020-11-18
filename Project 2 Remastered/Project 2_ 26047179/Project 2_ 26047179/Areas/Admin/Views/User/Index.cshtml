@@ -5,13 +5,13 @@
 @{ ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<fieldset>
+<fieldset id="normalField">
     <div class="border" style="background-color: lightcyan; padding:10px;">
         <div class="row">
             <div class="col">
                 <h2 class="text-info">User List</h2>
             </div>
-            <div class="text-right">
+            <div class="text-right" style="padding:20px;">
                 <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-info"><i class="fas fa-plus"></i> &nbsp; New Employee Registration</a>
             </div>
         </div>

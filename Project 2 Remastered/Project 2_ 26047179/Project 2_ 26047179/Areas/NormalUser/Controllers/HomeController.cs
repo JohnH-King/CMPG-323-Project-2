@@ -41,6 +41,7 @@ namespace Project_2__26047179.Controllers
             List<int> repartitionsg = new List<int>();
             List<int> repartitionsgm = new List<int>();
             List<int> repartitionsgf = new List<int>();
+            List<int> repartitionshr = new List<int>();
 
             var repgm = repartitionsgm;
             var repgf = repartitionsgf;
@@ -54,29 +55,39 @@ namespace Project_2__26047179.Controllers
             var roles = list.Select(x => x.JobRole).Distinct();
             var department = list.Select(x => x.Department).Distinct();
             var gender = list.Select(x => x.Gender).Distinct();
+            var hourlyRate = list.Select(x => x.HourlyRate).Distinct();
+            var male = 0;
+            var female = 0;
 
+            var temp = list.Select(x => x.HourlyRate).Distinct();
 
-            
 
             foreach (var item in ages)
             {
                 repartitions.Add(list.Count((x => x.Age == item)));
-            }            
-
-            
-            foreach (var itemd in department)
-            {
-                repartitionsd.Add(list.Count((x => x.Department == itemd)));
             }
+            foreach (var itemd in hourlyRate)
+            {
+                repartitionshr.Add(list.Count((x => x.HourlyRate == itemd)));
+            }
+
+            foreach (var items in department)
+            {
+                repartitionsd.Add(list.Count((x => x.Department == items)));
+
+            }
+
+            foreach (var itemg in gender)
+            {
+                repartitionsg.Add(list.Count((x => x.Gender == itemg)));
+                if (itemg == "Male") { repartitionsgm.Add(list.Count((x => x.Gender == itemg))); male += male; }
+                if (itemg == "Female") {repartitionsgf.Add(list.Count((x => x.Gender == itemg))); female += female; }
+            } 
 
             foreach (var itemr in roles)
             {
                 repartitionsr.Add(list.Count((x => x.JobRole == itemr)));
-                foreach (var itemg in gender)
-                {
-                    if (itemg == "male") repartitionsgm.Add(list.Count((x => x.JobRole == itemr)));
-                    if (itemg == "female") repartitionsgf.Add(list.Count((x => x.JobRole == itemr)));
-                }
+                
             }
 
             foreach (var items in empCount)
@@ -88,14 +99,20 @@ namespace Project_2__26047179.Controllers
             ViewBag.AGES = ages;
             ViewBag.EMPCOUNT = empCount;
             ViewBag.ROLES = roles;
+            ViewBag.HRATE = hourlyRate;
             ViewBag.GENDER = gender;
-            ViewBag.REPG = repartitionsg.ToList();
+            ViewBag.MALES = male;
+            ViewBag.FEMALES = female;
+
             ViewBag.REPR = repartitionsr.ToList();
             ViewBag.REP = repartitions.ToList();
             ViewBag.REPC = repartitionsc.ToList();
             ViewBag.REPD = repartitionsd.ToList();
+            ViewBag.REPHR = repartitionshr.ToList();
+            ViewBag.REPG = repartitionsg.ToList();
             ViewBag.REPGM = repartitionsgm.ToList();
             ViewBag.REPGF = repartitionsgf.ToList();
+
             return View();
         }
 
