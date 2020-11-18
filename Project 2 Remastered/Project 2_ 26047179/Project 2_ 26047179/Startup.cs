@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Project_2__26047179.Services;
+using Project_2__26047179.Data.Repository.IRepository;
+using Project_2__26047179.Data.Repository;
 
 namespace Project_2__26047179
 {
@@ -35,6 +37,8 @@ namespace Project_2__26047179
             services.AddIdentity<IdentityUser, IdentityRole>()//options => options.SignIn.RequireConfirmedAccount = true --- put this in the brackets when i want to email confirm
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<IDbInitializer, DBInitializer>();//default migration for seed service
             services.AddSingleton<IEmailSender, EmailSender>();

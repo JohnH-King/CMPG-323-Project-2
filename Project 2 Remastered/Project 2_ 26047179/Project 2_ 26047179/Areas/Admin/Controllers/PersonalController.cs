@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Project_2__26047179.Data;
 using Project_2__26047179.Models;
-using Project_2__26047179.Models.ViewModels;
 using Project_2__26047179.Utility;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
