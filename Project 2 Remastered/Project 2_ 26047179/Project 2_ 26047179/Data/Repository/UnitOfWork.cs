@@ -14,9 +14,11 @@ namespace Project_2__26047179.Data.Repository
         {
             _db = db;
             Employee = new EmployeeRepository(_db);
+            User = new UserRepository(_db);
         }
 
         public IEmployeeRepository Employee { get; private set; }
+        public IUserRepository User { get; private set; }
 
         public void Dispose()
         {

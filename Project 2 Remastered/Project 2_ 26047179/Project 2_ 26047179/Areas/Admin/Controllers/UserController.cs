@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project_2__26047179.Data;
+using Project_2__26047179.Data.Repository.IRepository;
 using Project_2__26047179.Utility;
 
 namespace Project_2__26047179.Areas.Admin.Controllers
@@ -15,60 +16,40 @@ namespace Project_2__26047179.Areas.Admin.Controllers
     [Area("Admin")]
     public class UserController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly IUnitOfWork _unitofWork;
 
-        public UserController(ApplicationDbContext db)
+        public UserController(IUnitOfWork unitofWork)
         {
-            _db = db;
+            _unitofWork = unitofWork;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var claimsIdentity = (ClaimsIdentity)this.User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
-            return View(await _db.ApplicationUser.Where(u => u.Id != claim.Value).ToListAsync());
+            return View(_unitofWork.User.GetAll(u => u.Id != claim.Value));
         }
 
-        public async Task<IActionResult> Lock(string id)
+        public IActionResult Lock(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var applicationUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (applicationUser == null)
-            {
-                return NotFound();
-            }
-
-            applicationUser.LockoutEnd = DateTime.Now.AddYears(1000);
-
-            await _db.SaveChangesAsync();
-
+            _unitofWork.User.LockUser(id);
             return RedirectToAction(nameof(Index));
         }
 
-        public async Task<IActionResult> UnLock(string id)
+        public IActionResult UnLock(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var applicationUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (applicationUser == null)
-            {
-                return NotFound();
-            }
-
-            applicationUser.LockoutEnd = DateTime.Now;
-
-            await _db.SaveChangesAsync();
-
+            _unitofWork.User.UnlockUser(id);
             return RedirectToAction(nameof(Index));
         }
     }

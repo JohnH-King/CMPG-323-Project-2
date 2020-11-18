@@ -10,5 +10,6 @@ namespace Project_2__26047179.Data.Repository.IRepository
         IEmployeeRepository Employee { get; }
         void Save();
 
+        IUserRepository User { get; }
     }
 }
